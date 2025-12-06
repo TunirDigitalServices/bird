@@ -1,4 +1,4 @@
-"use client"; // mark this layout as client component
+"use client"; 
 
 import { useEffect, useState } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+// import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import "./template.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -28,6 +28,9 @@ export default function RootLayout({ children }) {
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+    useEffect(() => {
+    import("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
 
   return (
