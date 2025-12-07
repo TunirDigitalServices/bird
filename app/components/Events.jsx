@@ -29,7 +29,7 @@ export default function Events() {
   ];
 
   return (
-    <section className="section events" id="events">
+    <section className="section events" id="evennement">
       <div className="container">
         <div className="row mb-5">
           <div className="col-md-8 mx-auto text-center">

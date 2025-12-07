@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
@@ -25,18 +26,46 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleClick = (e, targetId) => {
-    e.preventDefault();
-    const target = document.querySelector(targetId);
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop - 100, // adjust offset for navbar height
-        behavior: "smooth",
-      });
+useEffect(() => {
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) {
+      setTimeout(() => {
+        window.scrollTo({
+          top: el.offsetTop - 100,
+          behavior: "smooth",
+        });
+      }, 200); // wait for page to render
     }
-    setActiveSection(targetId.slice(1)); // update active immediately
-  };
+  }
+}, []);
+
+  const router = useRouter();
+const pathname = usePathname();
+
+const handleClick = (e, targetId) => {
+  e.preventDefault();
+
+  const hash = targetId; // "#about", "#services", etc.
+
+  // Not on homepage → redirect to homepage
+  if (pathname !== "/") {
+    router.push(`/${hash}`);
+    setActiveSection(hash.slice(1)); // FIX: keep active state correct
+    return;
+  }
+
+  // Already on homepage → smooth scroll
+  const target = document.querySelector(hash);
+  if (target) {
+    window.scrollTo({
+      top: target.offsetTop - 100,
+      behavior: "smooth",
+    });
+  }
+
+  setActiveSection(hash.slice(1)); // update active immediately
+};
 
   return (
     <header className="fbs__net-navbar navbar navbar-expand-lg dark">
@@ -87,6 +116,8 @@ export default function Navbar() {
                 { id: "about", label: "À propos" },
                 { id: "how-it-works", label: "Comment ça marche" },
                 { id: "services", label: "Services" },
+                { id: "evennement", label: "Événements" },
+
                 { id: "contact", label: "Contact" },
               ].map((item) => (
                 <li key={item.id} className="nav-item">
@@ -108,9 +139,9 @@ export default function Navbar() {
         {/* Right buttons */}
         <div className="ms-auto w-auto">
           <div className="header-social d-flex align-items-center gap-1">
-            <Link className="btn btn-primary py-2" href="#">
+            {/* <Link className="btn btn-primary py-2" href="#">
               Commencer
-            </Link>
+            </Link> */}
 
             <button
               className="fbs__net-navbar-toggler justify-content-center align-items-center ms-auto"

@@ -4,6 +4,8 @@ import { use } from "react";
 import { useEffect } from "react";
 import PureCounter from "@srexi/purecounterjs";
 import PreinscriptionForm from "../../components/PreinscriptionForm";
+import EventTestimonials from "../../components/EventTestimonials";
+import Schedule from "../../components/Schedule";
 export default function EventDetail(props) {
   const params = use(props.params); // unwrap the Promise
   const slug = params.slug; // server component, safe to access directly
@@ -255,6 +257,8 @@ export default function EventDetail(props) {
 
 
       <PreinscriptionForm />
+      <Schedule/>
+      <EventTestimonials/>
     </>
   );
 }

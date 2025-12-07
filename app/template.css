@@ -19,7 +19,7 @@ Buy Pro
   /* Secondary Color */
   --bs-secondary: #e2f6f7;
   --bs-secondary-rgb: 226, 246, 247;
-
+--surface-color: #ffffff;
   --bs-heading-color: #16181b;
   --inverse-color: #494b5b;
   --inverse-color-rgb: 73, 75, 91;
@@ -102,6 +102,17 @@ h6 {
   .section.first-section {
     padding-top: 130px;
   }
+
+.EventTestimonials .section-heading {
+    
+    margin-left: 60px;
+}
+
+
+
+
+
+
 }
 
 .text-heading-color {
@@ -858,11 +869,20 @@ h6 {
     left: 10px;
     max-width: 380px;
   }
+   .hero__v6  {
+     padding-bottom : 5rem  !important;
+    
+  }
 }
 @media (max-width: 575.98px) {
   .hero__v6 .hero-img .img-card {
     left: 10px;
     max-width: 280px;
+    
+  }
+   .hero__v6  {
+    padding-bottom : 5rem  !important;
+    
   }
 }
 
@@ -996,7 +1016,7 @@ h6 {
   background-color: rgba(var(--bs-secondary-rgb), 0.2);
   color: var(--bs-primary);
   display: inline-block;
-  /* padding: 5px 12px; */
+  padding: 5px 12px;
   border-radius: 7px;
   font-weight: 600;
   font-size: 0.75rem;
@@ -1075,7 +1095,7 @@ h6 {
 }
 
 .faq__v2 .subtitle {
-  background-color: rgba(var(--bs-secondary-rgb), 0.2);
+  background-color: #fff;
   color: var(--bs-primary);
   display: inline-block;
   padding: 5px 12px;
@@ -1305,6 +1325,38 @@ Events Style
   .contact-us .contact-us-content {
     padding: 20px !important;
   }
+  .about-us::before,
+  .EventTestimonials::before,
+  .contact-us::before {
+    display: none;
+  }
+  .about-us .section-heading p,
+  .EventTestimonials .section-heading p,
+  .contact-us .section-heading p {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+  }
+  
+  .EventTestimonials {
+    margin-top: -50px;
+    padding: 0px;
+  }
+  .EventTestimonials .section-heading {
+    margin-left: 0px;
+    margin-top: 40px;
+  }
+  .EventTestimonials .item {
+    padding: 40px 40px 60px 40px;
+  }
+  .EventTestimonials .item h4 {
+    font-size: 17px;
+  }
+  .testimonials .item img {
+    margin-right: 15px;
+  }
+  .testimonials .owl-nav {
+    display: none;
+  }
 
 }
 
@@ -1329,7 +1381,7 @@ Events Style
 }
 
 .contact__v2 .subtitle {
-  background-color: rgba(var(--bs-secondary-rgb), 0.2);
+  background-color: #fff;
   color: var(--bs-primary);
   display: inline-block;
   padding: 5px 12px;
@@ -1508,6 +1560,25 @@ footer::before {
   .fun-facts::before {
     width: 95%;
   }
+  .EventTestimonials .item {
+ 
+  padding: 31px !important;      
+}
+
+.footer {
+ 
+   padding-top: 100 !important;
+ 
+  
+
+}
+/* .EventTestimonials .section-heading {
+   
+    margin-left: 11px;
+} */
+
+
+
 }
 @media (max-width: 1200px) {
   
@@ -1819,7 +1890,16 @@ Contact Style
   position: relative;
   padding: 50px 0px;
 }
-
+.contact-us .subtitle {
+  background-color: #fff;
+  color: var(--bs-primary);
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+}
 
 
 
@@ -2016,5 +2096,578 @@ Contact Style
   color: #fff;
   font-size: 16px;
   font-weight: 400;
+}
+
+
+.EventTestimonials {
+  position: relative;
+  padding: 80px 0px;
+  margin-top: 150px;
+}
+.EventTestimonials .subtitle {
+  background-color: #fff;
+  color: var(--bs-primary);
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+}
+
+.EventTestimonials:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 65%;
+  height: 100%;
+  background-color: #f1f0fe;
+  content: '';
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+}
+
+
+
+.EventTestimonials .section-heading p {
+  margin-top: 50px;
+}
+
+.EventTestimonials .item {
+  background-color: var(--bs-primary);;
+  border-radius: 25px;
+  padding: 80px;
+}
+
+.EventTestimonials .item p {
+  font-size: 18px;
+  line-height: 40px;
+  color: #fff;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.EventTestimonials .item img {
+  border-radius: 50%;
+  max-width: 100px;
+  float: left;
+  margin-right: 25px;
+}
+
+.EventTestimonials .item span {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.EventTestimonials .item h4 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.EventTestimonials .owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-5px);
+  right: -25px;
+  text-align: right;
+}
+
+.EventTestimonials .owl-nav .owl-prev i,
+.EventTestimonials .owl-nav .owl-next i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  display: inline-block;
+  color: var(--bs-primary);;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.10);
+  opacity: 1;
+  transition: all .3s;
+}
+
+.EventTestimonials .owl-nav .owl-prev i {
+  position: absolute;
+  bottom: 65px;
+}
+
+.EventTestimonials .owl-nav .owl-prev i:hover,
+.EventTestimonials .owl-nav .owl-next i:hover {
+  opacity: 1;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+.EventTestimonials {
+  position: relative;
+  padding: 80px 0px;
+  margin-top: 150px;
+}
+
+.EventTestimonials:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 65%;
+  height: 100%;
+  background-color: #f1f0fe;
+  content: '';
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+}
+
+.EventTestimonials .section-heading {
+  margin-bottom: 0px;
+
+  vertical-align: middle;
+}
+
+.EventTestimonials .section-heading p {
+  margin-top: 50px;
+}
+
+.EventTestimonials .item {
+  background-color: var(--bs-primary);;
+  border-radius: 25px;
+  padding: 80px;      
+}
+
+.EventTestimonials .item p {
+  font-size: 18px;
+  line-height: 40px;
+  color: #fff;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.EventTestimonials .item img {
+  border-radius: 50%;
+  max-width: 100px;
+  float: left;
+  margin-right: 25px;
+}
+
+.EventTestimonials .item span {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.EventTestimonials .item h4 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.EventTestimonials .owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-5px);
+  right: -25px;
+  text-align: right;
+}
+
+.EventTestimonials .owl-nav .owl-prev i,
+.EventTestimonials .owl-nav .owl-next i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  display: inline-block;
+  color: var(--bs-primary);
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.10);
+  opacity: 1;
+  transition: all .3s;
+}
+
+.EventTestimonials .owl-nav .owl-prev i {
+  position: absolute;
+  bottom: 65px;
+}
+
+.EventTestimonials .owl-nav .owl-prev i:hover,
+.EventTestimonials .owl-nav .owl-next i:hover {
+  opacity: 1;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.schedule {
+  background-color:  #F1F0FE;
+  padding: 80px 0px;
+  margin-top: 150px;
+}
+.schedule .subtitle {
+  background-color: #fff;
+  color: var(--bs-primary);
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+}
+
+.schedule .schedule-header {
+  margin-bottom: 60px;
+}
+
+.schedule .schedule-header .nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  border-bottom: none;
+}
+
+.schedule .schedule-header .nav-tabs .nav-item .nav-link {
+  background: var(--surface-color);
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-radius: 16px;
+  padding: 20px 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--default-color), transparent 92%);
+  color: var(--default-color);
+  white-space: nowrap;
+}
+
+.schedule .schedule-header .nav-tabs .nav-item .nav-link:hover {
+  border-color: var(--bs-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--bs-primary), transparent 85%);
+}
+
+.schedule .schedule-header .nav-tabs .nav-item .nav-link.active {
+  background: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .schedule .schedule-header .nav-tabs .nav-item .nav-link {
+    padding: 16px 20px;
+  }
+}
+
+.schedule .schedule-content .session-timeline {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.schedule .schedule-content .session-timeline .session-block {
+  display: flex;
+  margin-bottom: 32px;
+  position: relative;
+  width: 100%;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-time {
+  width: 100px;
+  flex-shrink: 0;
+  padding-right: 20px;
+  text-align: right;
+  position: relative;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-time::after {
+  content: "";
+  position: absolute;
+  right: -11px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background: var(--bs-primary);
+  border-radius: 50%;
+  border: 3px solid var(--surface-color);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-time .start {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 2px;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-time .end {
+  display: block;
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card {
+  flex: 1;
+  background: var(--surface-color);
+  border-radius: 16px;
+  padding: 28px;
+  margin-left: 20px;
+  box-shadow: 0 4px 20px color-mix(in srgb, var(--default-color), transparent 92%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card.break-card {
+  background: color-mix(in srgb, var(--bs-primary), transparent 95%);
+  border-color: color-mix(in srgb, var(--bs-primary), transparent 80%);
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card.break-card .session-title {
+  color: var(--bs-primary);
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info {
+  flex: 1;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .session-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .session-meta .track {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .session-meta .track.keynote {
+  background: color-mix(in srgb, #ff6b6b, transparent 85%);
+  color: #ff6b6b;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .session-meta .track.development {
+  background: color-mix(in srgb, #4ecdc4, transparent 85%);
+  color: #4ecdc4;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .session-meta .track.design {
+  background: color-mix(in srgb, #45b7d1, transparent 85%);
+  color: #45b7d1;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .session-meta .track.business {
+  background: color-mix(in srgb, #f7931e, transparent 85%);
+  color: #f7931e;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .session-meta .track.break {
+  background: color-mix(in srgb, var(--bs-primary), transparent 85%);
+  color: var(--bs-primary);
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .session-meta .room {
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-weight: 500;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .session-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .session-description {
+  font-size: 14px;
+  color: var(--default-color);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .speaker-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .speaker-info .speaker-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .speaker-info .speaker-details .speaker-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin: 0 0 2px 0;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .session-info .speaker-info .speaker-details .speaker-role {
+  font-size: 12px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .add-to-schedule {
+  background: color-mix(in srgb, var(--bs-primary), transparent 90%);
+  border: 1px solid color-mix(in srgb, var(--bs-primary), transparent 70%);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: var(--bs-primary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .add-to-schedule i {
+  margin-right: 6px;
+}
+
+.schedule .schedule-content .session-timeline .session-block .session-card .add-to-schedule:hover {
+  background: var(--bs-primary);
+  color: var(--contrast-color);
+}
+
+.schedule .schedule-content .session-timeline .session-block.keynote .session-time::after {
+  background: #ff6b6b;
+}
+
+.schedule .schedule-content .session-timeline .session-block.development .session-time::after {
+  background: #4ecdc4;
+}
+
+.schedule .schedule-content .session-timeline .session-block.design .session-time::after {
+  background: #45b7d1;
+}
+
+.schedule .schedule-content .session-timeline .session-block.business .session-time::after {
+  background: #f7931e;
+}
+
+.schedule .schedule-content .session-timeline .session-block.break .session-time::after {
+  background: var(--bs-primary);
+}
+
+@media (max-width: 768px) {
+  .schedule .schedule-content .session-timeline::before {
+    left: 80px;
+  }
+
+  .schedule .schedule-content .session-timeline .session-block .session-time {
+    width: 70px;
+  }
+
+  .schedule .schedule-content .session-timeline .session-block .session-time::after {
+    right: -9px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .schedule .schedule-content .session-timeline .session-block .session-time .start {
+    font-size: 14px;
+  }
+
+  .schedule .schedule-content .session-timeline .session-block .session-card {
+    padding: 20px;
+    margin-left: 16px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .schedule .schedule-content .session-timeline .session-block .session-card .session-title {
+    font-size: 18px;
+  }
+
+  .schedule .schedule-content .session-timeline .session-block .session-card .add-to-schedule {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+.schedule .schedule-actions {
+  text-align: center;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.schedule .schedule-actions .btn {
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.schedule .schedule-actions .btn i {
+  font-size: 16px;
+}
+
+.schedule .schedule-actions .btn.btn-primary {
+  background: var(--bs-primary);
+  color: #fff;
+  border: 1px solid var(--bs-primary);
+}
+
+.schedule .schedule-actions .btn.btn-primary:hover {
+  background: color-mix(in srgb, var(--bs-primary), black 10%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--bs-primary), transparent 70%);
+}
+
+.schedule .schedule-actions .btn.btn-outline {
+  background: transparent;
+  color: var(--bs-primary);
+  border: 1px solid var(--bs-primary);
+}
+
+.schedule .schedule-actions .btn.btn-outline:hover {
+  background: var(--bs-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+  .schedule .schedule-actions .btn {
+    flex: 1;
+    justify-content: center;
+  }
 }
 /* 

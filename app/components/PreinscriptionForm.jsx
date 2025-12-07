@@ -8,7 +8,7 @@ export default function PreinscriptionForm() {
           {/* Section gauche : Informations */}
           <div className="col-lg-6 align-self-center">
             <div className="section-heading">
-              <h6>Préinscription</h6>
+              <h6 className="subtitle">Préinscription</h6>
               <h2>Inscrivez-vous dès maintenant à notre événement</h2>
               <p>
                 Remplissez ce formulaire pour réserver votre place. Vous
