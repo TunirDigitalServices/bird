@@ -16,7 +16,7 @@ export default function Hero() {
                   data-aos="fade-up"
                   data-aos-delay="0"
                 >
-                  Formation • Coaching • Solutions IA
+                  Human-Centered Management & IA
                 </span>
 
                 <h1
@@ -24,8 +24,8 @@ export default function Hero() {
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
-                  Renforcez vos équipes. Accélérez la performance. Dirigez avec
-                  clarté.
+                  Bird Training & Consulting — Là où l’humain et l’innovation
+                  avancent ensemble.
                 </h1>
 
                 <p
@@ -33,20 +33,18 @@ export default function Hero() {
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  Bird Consulting & Training aide les organisations à
-                  développer leurs leaders, renforcer les équipes et optimiser
-                  les performances grâce à des formations modernes, du
-                  consulting stratégique et des solutions basées sur
-                  l’intelligence artificielle.
+                  Accompagner vos projets, développer vos équipes et intégrer
+                  progressivement l’innovation et l’intelligence artificielle,
+                  toujours au service de l’humain.
                 </p>
 
                 <div className="cta d-flex gap-2 mb-4 mb-lg-5">
-                  <Link href="#" className="btn">
-                    Réserver une consultation
+                  <Link href="#evennement" className="btn">
+                    Événements
                   </Link>
 
-                  <Link href="#" className="btn btn-white-outline">
-                    En savoir plus
+                  <Link href="#contact" className="btn btn-white-outline">
+                    Contactez-nous
                     <svg
                       className="lucide lucide-arrow-up-right ms-1"
                       xmlns="http://www.w3.org/2000/svg"

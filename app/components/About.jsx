@@ -19,23 +19,24 @@ export default function About() {
                 </span>
 
                 <h2 className="mb-4" data-aos="fade-up" data-aos-delay="100">
-                  Bird Training & Consulting : Développer les leaders,
-                  renforcer les équipes et améliorer la performance
+                  Bird Training & Consulting : Accompagner les entrepreneurs et
+                  les organisations vers le succès
                 </h2>
 
                 <div data-aos="fade-up" data-aos-delay="200">
                   <p>
-                    Bird Training & Consulting est un cabinet spécialisé dans
-                    la formation, le coaching et l’accompagnement en management.
-                    Nous aidons les entreprises à renforcer leurs équipes,
-                    développer leurs leaders et installer une culture de
-                    performance durable.
+                    Bird Training & Consulting est un cabinet de conseil dédié à
+                    l’accompagnement des <strong>entrepreneurs, managers et
+                    organisations.</strong> Nous combinons <strong>, ateliers pratiques,
+                    séminaires et formations</strong>conseil pour transformer vos idées en
+                    projets concrets et orienter durablement votre
+                    développement.
                   </p>
                   <p>
-                    Grâce à une approche moderne, humaine et axée sur les
-                    résultats, nous combinons expertise managériale et outils
-                    d’intelligence artificielle pour fournir des solutions
-                    rapides, efficaces et mesurables.
+                    Avec un focus affirmé sur <strong>l’innovation et l’intelligence
+                    artificielle — toujours centrées sur l’humain </strong> — nous vous
+                    aidons à comprendre, maîtriser et intégrer ces leviers de
+                    manière progressive et adaptée à votre réalité.
                   </p>
                 </div>
 
@@ -56,33 +57,37 @@ export default function About() {
                     <span className="icon rounded-circle text-center">
                       <i className="bi bi-check"></i>
                     </span>
-                    <span className="text">Excellence & Leadership</span>
-                  </li>
-                  <li className="d-flex align-items-center gap-2">
-                    <span className="icon rounded-circle text-center">
-                      <i className="bi bi-check"></i>
+                    <span className="text">
+                      Innovation centrée sur l’humain
                     </span>
-                    <span className="text">Approche humaine & positive</span>
                   </li>
                   <li className="d-flex align-items-center gap-2">
                     <span className="icon rounded-circle text-center">
                       <i className="bi bi-check"></i>
                     </span>
                     <span className="text">
-                      Solutions intelligentes basées sur l’IA
+                      Transformation concrète des idées
                     </span>
                   </li>
                   <li className="d-flex align-items-center gap-2">
                     <span className="icon rounded-circle text-center">
                       <i className="bi bi-check"></i>
                     </span>
-                    <span className="text">Résultats mesurables</span>
+                    <span className="text">
+                      Approche progressive et adaptée
+                    </span>
                   </li>
                   <li className="d-flex align-items-center gap-2">
                     <span className="icon rounded-circle text-center">
                       <i className="bi bi-check"></i>
                     </span>
-                    <span className="text">Collaboration & transparence</span>
+                    <span className="text">Expertise en IA et innovation</span>
+                  </li>
+                  <li className="d-flex align-items-center gap-2">
+                    <span className="icon rounded-circle text-center">
+                      <i className="bi bi-check"></i>
+                    </span>
+                    <span className="text">Accompagnement durable</span>
                   </li>
                 </ul>
               </div>
@@ -112,9 +117,9 @@ export default function About() {
                 <div>
                   <h3 className="text-uppercase">Notre mission</h3>
                   <p className="fs-5 mb-0">
-                    Accompagner les organisations vers un niveau supérieur de
-                    performance grâce à des formations pratiques, un coaching
-                    personnalisé et des outils intelligents basés sur l’IA.
+                    Transformer vos idées en projets concrets et accompagner vos
+                    équipes à intégrer l’innovation et l’intelligence
+                    artificielle, toujours au service de l’humain.
                   </p>
                 </div>
               </div>

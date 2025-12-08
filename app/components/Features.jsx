@@ -6,10 +6,7 @@ export default function Features() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div
-              className="d-lg-flex p-5 rounded-4 content"
-              data-aos="fade-in"
-            >
+            <div className="d-lg-flex p-5 rounded-4 content" data-aos="fade-in">
               <div className="row">
                 {/* Left */}
                 <div className="col-lg-5 mb-5 mb-lg-0" data-aos="fade-up">
@@ -17,16 +14,19 @@ export default function Features() {
                     <div className="col-lg-11">
                       <div className="h-100 d-flex flex-column justify-content-between">
                         <div>
-                          <h2 className="mb-4">
-                            Pourquoi choisir Bird Training & Consulting ?
-                          </h2>
-                          <p className="mb-5">
-                            Nous aidons les organisations à améliorer leur
-                            management grâce à des formations pratiques, un
-                            accompagnement ciblé et des solutions IA qui
-                            rendent les équipes plus performantes et autonomes.
+                          <h2 className="mb-4">Notre philosophie</h2>
+                          <p className="mb-3">
+                            Chez Bird, nous croyons qu’une{" "}
+                            performance durable commence par
+                            l’humain. L’innovation et l’
+                            intelligence artificielle ne
+                            remplacent pas les compétences humaines : elles les
+                           <strong> amplifient</strong>  lorsqu’elles sont intégrées de manière{" "}
+                            progressive et adaptée à votre
+                            réalité.
                           </p>
                         </div>
+
                         <a
                           className="glightbox btn btn-play d-inline-flex align-items-center gap-2"
                           href="https://www.youtube.com/watch?v=DQx96G4yHd8"
@@ -49,13 +49,8 @@ export default function Features() {
                           <div className="icon text-center mb-3">
                             <i className="bi bi-person-check fs-4"></i>
                           </div>
-                          <h3 className="fs-6 fw-bold mb-2">
-                            Formations pratiques
-                          </h3>
-                          <p>
-                            Des contenus orientés résultats, basés sur des
-                            situations réelles.
-                          </p>
+                          <h3 className="fs-6 fw-bold mb-2">Personnalisée</h3>
+                          <p>Chaque projet est unique.</p>
                         </div>
 
                         <div
@@ -66,13 +61,8 @@ export default function Features() {
                           <div className="icon text-center mb-3">
                             <i className="bi bi-graph-up fs-4"></i>
                           </div>
-                          <h3 className="fs-6 fw-bold mb-2">
-                            Diagnostic & optimisation
-                          </h3>
-                          <p>
-                            Audit, analyse des équipes et recommandations
-                            ciblées.
-                          </p>
+                          <h3 className="fs-6 fw-bold mb-2">Évolutive</h3>
+                          <p>Adaptée à votre rythme et à vos besoins.</p>
                         </div>
 
                         <div
@@ -83,10 +73,9 @@ export default function Features() {
                           <div className="icon text-center mb-3">
                             <i className="bi bi-cpu fs-4"></i>
                           </div>
-                          <h3 className="fs-6 fw-bold mb-2">Outils IA intégrés</h3>
+                          <h3 className="fs-6 fw-bold mb-2">Équilibrée</h3>
                           <p>
-                            Automatisation, analyse intelligente et gain de
-                            productivité.
+                            Innovation utile, toujours au service de l’humain.
                           </p>
                         </div>
 
@@ -99,11 +88,9 @@ export default function Features() {
                             <i className="bi bi-headset fs-4"></i>
                           </div>
                           <h3 className="fs-6 fw-bold mb-2">
-                            Accompagnement sur mesure
+                            Orientée résultats
                           </h3>
-                          <p>
-                            Coaching individuel ou d’équipe avec suivi continu.
-                          </p>
+                          <p>Ancrée dans la réalité de vos projets.</p>
                         </div>
                       </div>
                     </div>

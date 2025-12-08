@@ -2,7 +2,7 @@
 
 export default function PreinscriptionForm() {
   return (
-    <div className="contact-us section " id="contact" >
+    <div className="contact-us preinscription section " id="contact" >
       <div className="container">
         <div className="row">
           {/* Section gauche : Informations */}

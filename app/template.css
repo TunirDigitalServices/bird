@@ -815,7 +815,7 @@ h6 {
   padding: 10rem 0 !important;
 }
 .hero__v6 .hero-subtitle {
-  background: color-mix(in srgb, var(--bs-secondary), transparent 70%);
+  background: #f1f0fe;
   color: var(--bs-primary);
   display: inline-block;
   padding: 5px 12px;
@@ -857,13 +857,18 @@ h6 {
 .hero__v6 .hero-img .img-card {
   z-index: 10;
   border-radius: 20px;
-  -webkit-box-shadow: 0 15px 40px 0 rgba(var(--bs-black-rgb), 0.1);
-  box-shadow: 0 15px 40px 0 rgba(var(--bs-black-rgb), 0.1);
+  /* -webkit-box-shadow: 0 15px 40px 0 rgba(var(--bs-black-rgb), 0.1); */
+  /* box-shadow: 0 15px 40px 0 rgba(var(--bs-black-rgb), 0.1); */
   position: absolute;
   max-width: 280px;
   bottom: -40px;
   left: -60px;
 }
+.benefits-section {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+
 @media (max-width: 991.98px) {
   .hero__v6 .hero-img .img-card {
     left: 10px;
@@ -891,12 +896,12 @@ h6 {
   height: 60px;
   line-height: 60px;
   border-radius: 50%;
-  background-color: var(--bs-secondary);
+  background-color: #00196330;
   color: var(--bs-primary);
 }
 
 .features__v2 .content {
-  background-color: rgba(var(--bs-secondary-rgb), 0.2);
+  background-color: #f1f0fe;
 }
 
 .features__v2 .btn-play i {
@@ -909,7 +914,7 @@ h6 {
 }
 
 .about__v4 .subtitle {
-  background-color: rgba(var(--bs-secondary-rgb), 0.2);
+  background-color: #f1f0fe;
   color: var(--bs-primary);
   display: inline-block;
   padding: 5px 12px;
@@ -955,7 +960,7 @@ h6 {
 }
 
 .pricing__v2 .subtitle {
-  background-color: rgba(var(--bs-secondary-rgb), 0.2);
+  background-color: #f1f0fe;
   color: var(--bs-primary);
   display: inline-block;
   padding: 5px 12px;
@@ -1003,7 +1008,7 @@ h6 {
 }
 
 .howitworks__v1 .subtitle {
-  background-color: rgba(var(--bs-secondary-rgb), 0.2);
+  background-color: #f1f0fe;
   color: var(--bs-primary);
   display: inline-block;
   padding: 5px 12px;
@@ -1013,7 +1018,7 @@ h6 {
   margin-bottom: 10px;
 }
 .team .subtitle {
-  background-color: rgba(var(--bs-secondary-rgb), 0.2);
+  background-color: #f1f0fe;
   color: var(--bs-primary);
   display: inline-block;
   padding: 5px 12px;
@@ -1055,7 +1060,7 @@ h6 {
 
 .events .subtitle,
 .services__v3 .subtitle {
-  background-color: rgba(var(--bs-secondary-rgb), 0.2);
+  background-color: #f1f0fe;
   color: var(--bs-primary);
   display: inline-block;
   padding: 5px 12px;
@@ -1080,8 +1085,9 @@ h6 {
   right: -10px;
   bottom: 0px;
   border-radius: 50%;
-  background-color: rgba(var(--bs-secondary-rgb), 1);
+  background-color:#f1f0fe;
 }
+
 
 .services__v3 .icon svg {
   width: 50px;
@@ -1091,7 +1097,7 @@ h6 {
 }
 
 .faq__v2 {
-  background-color: rgba(var(--inverse-color-rgb), 0.02);
+  /* background-color: rgba(var(--inverse-color-rgb), 0.02); */
 }
 
 .faq__v2 .subtitle {
@@ -1132,7 +1138,7 @@ Events Style
 }
 
 .events .item {
-  background-color: rgba(var(--bs-secondary-rgb), 0.2);
+  background-color: #f1f0fe;
 
   border-radius: 25px;
   position: relative;
@@ -1361,7 +1367,7 @@ Events Style
 }
 
 .testimonials__v2 .subtitle {
-  background-color: rgba(var(--bs-secondary-rgb), 0.2);
+  background-color: #f1f0fe;
   color: var(--bs-primary);
   display: inline-block;
   padding: 5px 12px;
@@ -1879,10 +1885,24 @@ Contact Style
 */
 
 .contact-us {
-  margin-top: 170px;
+ 
   position: relative;
-  padding: 50px 0px;
+
 }
+
+/* Preinscription: keep 170px spacing */
+.preinscription {
+  margin-top: 170px;
+  padding: 50px 0; /* optional, or adjust */
+}
+
+/* Ce que vous gagnez: 70px top & bottom */
+.cequevousgagnez {
+  margin-top: 100px !important; /* remove extra top margin */
+  margin-bottom : 100px   !important;
+}
+
+
 .contact-us .subtitle {
   background-color: #fff;
   color: var(--bs-primary);
