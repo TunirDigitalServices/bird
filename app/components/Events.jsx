@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Events() {
   const events = [
     {
-      slug: "Pourquoi l’intelligence artificielle ?",
+      slug: "pourquoi-lintelligence-artificielle",
       img: "/images/imen3.jpg",
       date: "19 Décembre 2025",
       category: "Innovation & AI",

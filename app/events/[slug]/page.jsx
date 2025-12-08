@@ -13,8 +13,8 @@ export default function EventDetail(props) {
   // Example static data
   const events = [
     {
-      slug: "leadership-moderne-communication",
-      title: "THE ANNUAL MARKETING CONFERENCE",
+      slug: "pourquoi-lintelligence-artificielle",
+      title: "Pourquoi l’intelligence artificielle ?",
       date: "10-12 December",
       location: "Downtown Conference Center, New York",
       img: "/images/hero-bg.jpg",
