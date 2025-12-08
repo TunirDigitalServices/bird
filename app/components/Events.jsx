@@ -6,26 +6,14 @@ import Image from "next/image";
 export default function Events() {
   const events = [
     {
-      slug: "leadership-moderne-communication",
-      img: "/images/event-01.jpg",
-      date: "10 Janvier 2025",
-      category: "Leadership & Communication",
-      title: "Formation : Leadership Moderne & Communication d’Équipe",
+      slug: "Pourquoi l’intelligence artificielle ?",
+      img: "/images/imen3.jpg",
+      date: "19 Décembre 2025",
+      category: "Innovation & AI",
+      title: "Pourquoi l’intelligence artificielle ?",
+      location: "Tunis, Tunisie",
+      speaker: "Animé par: Imen Regaïeg", // <-- new field
     },
-    // {
-    //   slug: "ia-optimiser-travail",
-    //   img: "/images/event-02.jpg",
-    //   date: "15 Janvier 2025",
-    //   category: "AI Productivity",
-    //   title: "Atelier : Utiliser l’IA pour Optimiser le Travail",
-    // },
-    // {
-    //   slug: "gestion-equipe-conflits",
-    //   img: "/images/event-03.jpg",
-    //   date: "20 Janvier 2025",
-    //   category: "Team Management",
-    //   title: "Workshop : Gestion d’Équipe & Résolution des Conflits",
-    // },
   ];
 
   return (
@@ -33,7 +21,9 @@ export default function Events() {
       <div className="container">
         <div className="row mb-5">
           <div className="col-md-8 mx-auto text-center">
-            <span className="subtitle text-uppercase mb-3">Notre Événements</span>
+            <span className="subtitle text-uppercase mb-3">
+              Notre Événements
+            </span>
             <h2 className="mb-3">
               Découvrez nos prochaines formations, ateliers et workshops.
             </h2>
@@ -50,8 +40,8 @@ export default function Events() {
                       <Image
                         src={event.img}
                         alt={event.title}
-                        width={400}
-                        height={250}
+                        width={300}
+                        height={150}
                         className="img-fluid"
                       />
                       <div className="date">{event.date}</div>
@@ -65,6 +55,12 @@ export default function Events() {
                       </li>
                       <li className="w-100">
                         <h4>{event.title}</h4>
+
+                        <p className="speaker">{event.speaker}</p>
+                        <p className="location">
+                          <i className="fa fa-map-marker-alt me-1 "></i>
+                          {event.location}
+                        </p>
                       </li>
                     </ul>
                     <Link href={`/events/${event.slug}`}>
@@ -77,6 +73,7 @@ export default function Events() {
           ))}
         </div>
       </div>
+      
     </section>
   );
 }
