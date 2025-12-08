@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
-import PureCounter from "@srexi/purecounterjs";
+
 
 export default function Stats() {
-  useEffect(() => {
-    new PureCounter(); // Initialize PureCounter on client-side
+ useEffect(() => {
+    import("@srexi/purecounterjs").then((module) => {
+      new module.default();
+    });
   }, []);
 
   return (
