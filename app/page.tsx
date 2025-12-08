@@ -10,6 +10,8 @@ import Events from "./components/Events";
 import Testimonials from "./components/Testimonials";
 import Faq from "./components/Faq";
 import ContactUs from "./components/ContactUs";
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
    <>
