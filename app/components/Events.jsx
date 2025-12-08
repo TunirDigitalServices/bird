@@ -12,20 +12,20 @@ export default function Events() {
       category: "Leadership & Communication",
       title: "Formation : Leadership Moderne & Communication d’Équipe",
     },
-    {
-      slug: "ia-optimiser-travail",
-      img: "/images/event-02.jpg",
-      date: "15 Janvier 2025",
-      category: "AI Productivity",
-      title: "Atelier : Utiliser l’IA pour Optimiser le Travail",
-    },
-    {
-      slug: "gestion-equipe-conflits",
-      img: "/images/event-03.jpg",
-      date: "20 Janvier 2025",
-      category: "Team Management",
-      title: "Workshop : Gestion d’Équipe & Résolution des Conflits",
-    },
+    // {
+    //   slug: "ia-optimiser-travail",
+    //   img: "/images/event-02.jpg",
+    //   date: "15 Janvier 2025",
+    //   category: "AI Productivity",
+    //   title: "Atelier : Utiliser l’IA pour Optimiser le Travail",
+    // },
+    // {
+    //   slug: "gestion-equipe-conflits",
+    //   img: "/images/event-03.jpg",
+    //   date: "20 Janvier 2025",
+    //   category: "Team Management",
+    //   title: "Workshop : Gestion d’Équipe & Résolution des Conflits",
+    // },
   ];
 
   return (
