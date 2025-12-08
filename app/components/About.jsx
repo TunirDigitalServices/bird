@@ -98,9 +98,9 @@ export default function About() {
             <div className="img-wrap position-relative">
               <Image
                 className="img-fluid rounded-4"
-                src="/images/about_2-min.jpg"
+                src="/images/about_5-min.jpg"
                 alt="FreeBootstrap.net image placeholder"
-                width={600}
+                width={680}
                 height={400}
                 data-aos="fade-up"
                 data-aos-delay="0"
