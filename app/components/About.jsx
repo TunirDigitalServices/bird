@@ -19,24 +19,30 @@ export default function About() {
                 </span>
 
                 <h2 className="mb-4" data-aos="fade-up" data-aos-delay="100">
-                  Bird Training & Consulting : Accompagner les entrepreneurs et
-                  les organisations vers le succès
+                  <strong>Bird Training & Consulting : Transformer vos idées, renforcer
+                  vos équipes et innover avec sens.</strong>
                 </h2>
 
                 <div data-aos="fade-up" data-aos-delay="200">
                   <p>
                     Bird Training & Consulting est un cabinet de conseil dédié à
-                    l’accompagnement des <strong>entrepreneurs, managers et
-                    organisations.</strong> Nous combinons <strong>, ateliers pratiques,
-                    séminaires et formations</strong>conseil pour transformer vos idées en
-                    projets concrets et orienter durablement votre
-                    développement.
+                    l’accompagnement des{" "}
+                    <strong>entrepreneurs, managers et organisations.</strong>{" "}
+                    Nous combinons{" "}
+                    <strong>
+                      conseil, ateliers pratiques, séminaires et formations
+                    </strong>
+                    pour transformer vos idées en projets concrets et orienter
+                    durablement votre développement.
                   </p>
                   <p>
-                    Avec un focus affirmé sur <strong>l’innovation et l’intelligence
-                    artificielle — toujours centrées sur l’humain </strong> — nous vous
-                    aidons à comprendre, maîtriser et intégrer ces leviers de
-                    manière progressive et adaptée à votre réalité.
+                    Avec un focus affirmé sur{" "}
+                    <strong>
+                      l’innovation et l’intelligence artificielle — toujours
+                      centrées sur l’humain{" "}
+                    </strong>{" "}
+                    — nous vous aidons à comprendre, maîtriser et intégrer ces
+                    leviers de manière progressive et adaptée à votre réalité.
                   </p>
                 </div>
 
@@ -98,7 +104,7 @@ export default function About() {
             <div className="img-wrap position-relative">
               <Image
                 className="img-fluid rounded-4"
-                src="/images/about_5-min.jpg"
+                src="/images/about_6-min.jpg"
                 alt="FreeBootstrap.net image placeholder"
                 width={680}
                 height={400}

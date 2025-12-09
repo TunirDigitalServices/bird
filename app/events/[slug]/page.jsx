@@ -15,14 +15,14 @@ export default function EventDetail(props) {
     {
       slug: "pourquoi-lintelligence-artificielle",
       title: "Pourquoi l’intelligence artificielle ?",
-      date: "10-12 December",
-      location: "Downtown Conference Center, New York",
+      date: "19 Décembre 2025",
+      location: " Le Corail Suites Hotel -Berges du Lac 2",
       img: "/images/hero-bg.jpg",
       description:
         "Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet accusamus error amet eius aut accusantium et. Non odit consequatur repudiandae sequi ea odio molestiae. Enim possimus sunt inventore in est ut optio sequi unde.",
       about: {
-        where: "Downtown Conference Center, New York",
-        when: "Monday to Wednesday\n10-12 December",
+        where: " Le Corail Suites Hotel -Berges du Lac 2",
+        when: "Vendredi\n19 Décembre 2025",
       },
       youtube: "https://www.youtube.com/watch?v=Y7f98aduVJ8",
     },
@@ -37,30 +37,7 @@ export default function EventDetail(props) {
       twitter: "#",
       linkedin: "#",
     },
-    {
-      name: "Mr. Sami Trabelsi",
-      role: "Consultant Business",
-      img: "/images/member-02.jpg",
-      facebook: "#",
-      twitter: "#",
-      linkedin: "#",
-    },
-    {
-      name: "Mme. Leila Hammami",
-      role: "Expert Marketing",
-      img: "/images/member-03.jpg",
-      facebook: "#",
-      twitter: "#",
-      linkedin: "#",
-    },
-    {
-      name: "Stella Blair",
-      role: "Animateur Digital",
-      img: "/images/member-04.jpg",
-      facebook: "#",
-      twitter: "#",
-      linkedin: "#",
-    },
+  
   ];
   const facts = [
     {
@@ -110,9 +87,7 @@ export default function EventDetail(props) {
         {/* Hero content */}
         <div className="container d-flex flex-column align-items-center text-center mt-auto">
           <h2 data-aos="fade-up" data-aos-delay="100" className="">
-            THE ANNUAL
-            <br />
-            <span>MARKETING</span> CONFERENCE
+            {event.title}
           </h2>
 
           <p data-aos="fade-up" data-aos-delay="200">
