@@ -37,7 +37,6 @@ export default function EventDetail(props) {
       twitter: "#",
       linkedin: "#",
     },
-  
   ];
   const facts = [
     {
@@ -230,10 +229,9 @@ export default function EventDetail(props) {
         </div>
       </div>
 
-
       <PreinscriptionForm />
-      <Schedule/>
-      <EventTestimonials/>
+      <Schedule />
+      <EventTestimonials />
     </>
   );
 }

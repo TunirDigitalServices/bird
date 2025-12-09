@@ -1,8 +1,47 @@
 "use client";
 
+import { useState } from "react";
+
 export default function PreinscriptionForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (status !== "idle") setStatus("idle"); // hide previous message
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      const res = await fetch("/api/preinscriptions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    }
+  };
+
   return (
-    <div className="contact-us preinscription section " id="preinscription" >
+    <div className="contact-us preinscription section" id="preinscription">
       <div className="container">
         <div className="row">
           {/* Section gauche : Informations */}
@@ -14,7 +53,7 @@ export default function PreinscriptionForm() {
                 Remplissez ce formulaire pour réserver votre place. Vous
                 recevrez un email de confirmation avec tous les détails.
               </p>
-              <div className="special-offer">
+              {/* <div className="special-offer">
                 <span className="offer">
                   off
                   <br />
@@ -29,14 +68,14 @@ export default function PreinscriptionForm() {
                 <a href="#">
                   <i className="fa fa-angle-right"></i>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
 
           {/* Section droite : Formulaire */}
           <div className="col-lg-6">
             <div className="contact-us-content">
-              <form id="contact-form" action="" method="post">
+              <form id="contact-form" onSubmit={handleSubmit}>
                 <div className="row">
                   {/* Nom */}
                   <div className="col-lg-12">
@@ -47,7 +86,9 @@ export default function PreinscriptionForm() {
                         id="name"
                         placeholder="Votre Nom..."
                         autoComplete="on"
-                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        // required
                       />
                     </fieldset>
                   </div>
@@ -61,6 +102,8 @@ export default function PreinscriptionForm() {
                         id="email"
                         pattern="[^ @]*@[^ @]*"
                         placeholder="Votre Email..."
+                        value={formData.email}
+                        onChange={handleChange}
                         required
                       />
                     </fieldset>
@@ -74,6 +117,8 @@ export default function PreinscriptionForm() {
                         name="phone"
                         id="phone"
                         placeholder="Votre Numéro de Téléphone..."
+                        value={formData.phone}
+                        onChange={handleChange}
                         required
                       />
                     </fieldset>
@@ -86,6 +131,8 @@ export default function PreinscriptionForm() {
                         name="message"
                         id="message"
                         placeholder="Votre message ou commentaire..."
+                        value={formData.message}
+                        onChange={handleChange}
                       ></textarea>
                     </fieldset>
                   </div>
@@ -97,12 +144,25 @@ export default function PreinscriptionForm() {
                         type="submit"
                         id="form-submit"
                         className="orange-button"
+                        disabled={status === "loading"}
                       >
-                        Préinscription maintenant
+                        {status === "loading"
+                          ? "Envoi..."
+                          : "Préinscription maintenant"}
                       </button>
                     </fieldset>
                   </div>
                 </div>
+
+                {/* Status messages */}
+                {status === "success" && (
+                  <p className="text-light mt-2">Préinscription réussie !</p>
+                )}
+                {status === "error" && (
+                  <p className="text-danger mt-2">
+                    Erreur, veuillez réessayer.
+                  </p>
+                )}
               </form>
             </div>
           </div>
