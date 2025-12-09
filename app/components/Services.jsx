@@ -10,7 +10,7 @@ export default function Services() {
               Nos services
             </span>
             <h2 className="mb-3" data-aos="fade-up" data-aos-delay="50">
-              Accompagner vos projets avec conseil, ateliers et formations
+              Nous proposons des services modulables accessibles aux organisations et au public élargi.
             </h2>
           </div>
         </div>
@@ -21,9 +21,9 @@ export default function Services() {
             { icon: "bi-gear-fill", title: "Conseil", desc: "Structurer vos projets, clarifier vos décisions et orienter vos choix.", delay: 100 },
             { icon: "bi-lightbulb-fill", title: "Ateliers pratiques", desc: "Expérimenter et mettre en pratique concepts et outils.", delay: 150 },
             { icon: "bi-diagram-3-fill", title: "Séminaires", desc: "Prendre du recul et renforcer l’intelligence collective.", delay: 200 },
-            { icon: "bi-people-fill", title: "Formations ciblées", desc: "Innovation, IA appliquée, management, communication et culture numérique.", delay: 250 },
-            { icon: "bi-robot", title: "Intégration progressive de l’innovation et de l’IA", desc: "Comprendre, tester et adopter ces leviers, toujours avec l’humain au centre.", delay: 300 },
-            { icon: "bi-kanban", title: "Parcours modulables", desc: "Accessibles aux organisations et au public élargi.", delay: 350 },
+            { icon: "bi-people-fill", title: "Formations ciblées", desc: "Innovation, IA appliquée, management, communication, finance, gestion des projets et des risques.", delay: 250 },
+            { icon: "bi-robot", title: "Intégration progressive de l’innovation et de l’IA", desc: " Comprendre, tester et adopter ces leviers, toujours avec l’humain au centre.", delay: 300 },
+     
           ].map((service, index) => (
             <div
               key={index}

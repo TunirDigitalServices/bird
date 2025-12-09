@@ -10,12 +10,17 @@ export default function HowItWorks() {
         <div className="row mb-5">
           <div className="col-md-6 text-center mx-auto">
             <span className="subtitle text-uppercase mb-3" data-aos="fade-up">
-              Comment ça marche
+             Comment ça marche?
             </span>
-            <h2 data-aos="fade-up" data-aos-delay="100">Notre Processus</h2>
+            <h2 data-aos="fade-up" data-aos-delay="100">
+              Notre Processus
+            </h2>
             <p data-aos="fade-up" data-aos-delay="200">
-              Une approche simple et structurée pour former, accompagner et
-              développer vos équipes.
+              <strong>
+                Un processus clair et structuré pour faire avancer vos projets,
+                consolider vos équipes et intégrer l’innovation de manière
+                progressive.
+              </strong>
             </p>
           </div>
         </div>
@@ -36,17 +41,23 @@ export default function HowItWorks() {
                   height={100}
                 />
               </div>
-              <span className="step-number rounded-circle fw-bold mb-5 mx-auto">1</span>
+              <span className="step-number rounded-circle fw-bold mb-5 mx-auto">
+                1
+              </span>
               <h3 className="fs-5 mb-4">Analyse & diagnostic</h3>
               <p>
                 Nous évaluons vos besoins, vos équipes et vos objectifs pour
-                définir une stratégie claire.
+                définir la meilleure stratégie et clarifier vos priorités.
               </p>
             </div>
           </div>
 
           {/* Step 2 */}
-          <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+          <div
+            className="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <div className="step-card reverse text-center h-100 d-flex flex-column position-relative">
               <div data-aos="fade-right" data-aos-delay="1100">
                 <Image
@@ -57,17 +68,24 @@ export default function HowItWorks() {
                   height={100}
                 />
               </div>
-              <span className="step-number rounded-circle fw-bold mb-5 mx-auto">2</span>
-              <h3 className="fs-5 mb-4">Plan d'action personnalisé</h3>
+              <span className="step-number rounded-circle fw-bold mb-5 mx-auto">
+                2
+              </span>
+              <h3 className="fs-5 mb-4">Plan d’action personnalisé</h3>
               <p>
-                Mise en place d’un programme de formation ou
-                d’accompagnement adapté à votre organisation.
+                Nous élaborons un programme adapté à votre organisation,
+                incluant conseils, ateliers ou séminaires ou formations selon
+                vos besoins et objectifs.
               </p>
             </div>
           </div>
 
           {/* Step 3 */}
-          <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1200">
+          <div
+            className="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="1200"
+          >
             <div className="step-card text-center h-100 d-flex flex-column position-relative">
               <div data-aos="fade-right" data-aos-delay="1700">
                 <Image
@@ -78,23 +96,32 @@ export default function HowItWorks() {
                   height={100}
                 />
               </div>
-              <span className="step-number rounded-circle fw-bold mb-5 mx-auto">3</span>
-              <h3 className="fs-5 mb-4">Formation & Coaching</h3>
+              <span className="step-number rounded-circle fw-bold mb-5 mx-auto">
+                3
+              </span>
+              <h3 className="fs-5 mb-4">Mise en œuvre</h3>
               <p>
-                Sessions interactives, outils pratiques et utilisation de
-                l’IA pour renforcer les compétences.
+                Accompagnement concret pour appliquer les recommandations et
+                expérimenter les solutions proposées.
               </p>
             </div>
           </div>
 
           {/* Step 4 */}
-          <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1800">
+          <div
+            className="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="1800"
+          >
             <div className="step-card last text-center h-100 d-flex flex-column position-relative">
-              <span className="step-number rounded-circle fw-bold mb-5 mx-auto">4</span>
+              <span className="step-number rounded-circle fw-bold mb-5 mx-auto">
+                4
+              </span>
               <h3 className="fs-5 mb-4">Suivi & amélioration</h3>
               <p>
-                Mesure des progrès, ajustements continus et accompagnement
-                pour assurer un impact durable.
+                Nous mesurons les progrès, ajustons les actions et vous
+                fournissons un suivi pour assurer un impact durable et des
+                résultats concrets.
               </p>
             </div>
           </div>
