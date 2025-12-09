@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/layout.jsx", "next.config.ts", "app/api/preinscriptions/route.js"  ],
+, "app/layout.jsx", "next.config.ts", "app/api/preinscriptions/route.ts"  ],
   "exclude": ["node_modules"]
 }

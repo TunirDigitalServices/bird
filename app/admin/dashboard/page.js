@@ -1,63 +1,51 @@
-'use client'
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+"use client";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function AdminDashboard() {
-  const [csvData, setCsvData] = useState([])
-  const router = useRouter()
+  const [csvData, setCsvData] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
-    const token = localStorage.getItem('adminToken')
+    const token = localStorage.getItem("adminToken");
     if (!token) {
-      router.push('/admin/login')
-      return
+      router.push("/admin/login");
+      return;
     }
-    fetchCsv()
-  }, [])
+    fetchCsv();
+  }, []);
 
 const fetchCsv = async () => {
   const res = await fetch('/api/preinscriptions')
   if (res.ok) {
-    const text = await res.text()
-    const rows = text.split('\n').filter(Boolean)
-    if (rows.length === 0) return setCsvData([])
-
-    const headers = rows[0].split(';').map(h => h.replace(/^"|"$/g, ''))
-    const data = rows.slice(1).map(row => {
-      const values = row.split(';').map(v => v.replace(/^"|"$/g, ''))
-      return headers.reduce((acc, header, i) => {
-        acc[header] = values[i] || ''
-        return acc
-      }, {})
+    const data= await res.json()
+    const filteredData = data.map(({ eventId, createdAt, ...rest }) => {
+      // format createdAt
+      const date = new Date(createdAt)
+      const formattedDate = `${date.getDate().toString().padStart(2,'0')}/${(date.getMonth()+1).toString().padStart(2,'0')}/${date.getFullYear()} ${date.getHours().toString().padStart(2,'0')}:${date.getMinutes().toString().padStart(2,'0')}`
+      return { ...rest, createdAt: formattedDate }
     })
-    setCsvData(data)
+    setCsvData(filteredData)
   } else {
     setCsvData([])
   }
 }
 
 
-
   const handleLogout = () => {
-    localStorage.removeItem('adminToken')
-    router.push('/admin/login')
-  }
+    localStorage.removeItem("adminToken");
+    router.push("/admin/login");
+  };
 
   return (
-    <div className="container py-5" style={{marginTop: '80px'}}>
+    <div className="container py-5" style={{ marginTop: "80px" }}>
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2>Préinscriptions Dashboard</h2>
         <div>
-          <a
-            href="/api/preinscriptions"
-            className="btn btn-warning me-2"
-          >
+          <a href="/api/preinscriptions?download=1" className="btn btn-warning me-2">
             Download CSV
           </a>
-          <button
-            onClick={handleLogout}
-            className="btn btn-danger"
-          >
+          <button onClick={handleLogout} className="btn btn-danger">
             Logout
           </button>
         </div>
@@ -92,5 +80,5 @@ const fetchCsv = async () => {
         )}
       </div>
     </div>
-  )
+  );
 }
