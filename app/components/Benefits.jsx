@@ -13,7 +13,7 @@ export default function CeQueVousGagnez() {
               <p>
                 Grâce à notre accompagnement, vos projets avancent concrètement et vos équipes deviennent autonomes tout en intégrant progressivement l’innovation et l’IA.
               </p>
-              <div className="special-offer">
+              {/* <div className="special-offer">
                 <span className="offer">
                   gains
                   <br />
@@ -25,7 +25,7 @@ export default function CeQueVousGagnez() {
                 <h4>
                   Performance <em>optimisée</em>!
                 </h4>
-              </div>
+              </div> */}
             </div>
           </div>
 
