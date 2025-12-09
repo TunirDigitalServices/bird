@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer pt-5 pb-5 bg-primary text-white">
       <div className="container">
         {/* Logo */}
-        <div className="d-flex justify-content-start mb-4">
+        <div className="d-flex justify-content-center justify-content-md-start mb-4">
           <Image
             src="/images/Logotc-new.png"
             alt="Bird Consulting & Training"
@@ -17,10 +17,8 @@ export default function Footer() {
           />
         </div>
 
-       
-
         {/* Footer Links */}
-        <div className="row justify-content-between mb-5 g-xl-5">
+        <div className="row justify-content-between mb-5 g-xl-5 text-center text-md-start">
           {/* À propos */}
           <div className="col-md-3 mb-5 mb-lg-0">
             <h3 className="mb-3 text-white">À propos</h3>
@@ -33,26 +31,26 @@ export default function Footer() {
           <div className="col-md-3 mb-5 mb-lg-0">
             <h3 className="mb-3 text-white">Entreprise</h3>
             <ul className="list-unstyled">
-              <li><a href="page-about.html" className="text-light text-decoration-none">Leadership</a></li>
-              <li><a href="page-careers.html" className="text-light text-decoration-none">Carrières</a></li>
-              <li><a href="page-case-studies.html" className="text-light text-decoration-none">Études de cas</a></li>
-              <li><a href="page-terms-conditions.html" className="text-light text-decoration-none">Conditions générales</a></li>
-              <li><a href="page-privacy-policy.html" className="text-light text-decoration-none">Politique de confidentialité</a></li>
+              <li><a href="#about" className="text-light text-decoration-none">À propos</a></li>
+              <li><a href="#how-it-works" className="text-light text-decoration-none">Comment ça marche?</a></li>
+              <li><a href="#services" className="text-light text-decoration-none">Nos services</a></li>
+              <li><a href="#evennement" className="text-light text-decoration-none">Nos Évènements</a></li>
+              <li><a href="#benefits" className="text-light text-decoration-none">Ce que vous gagnez</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div className="col-md-3 mb-5 mb-lg-0">
             <h3 className="mb-3 text-white">Contact</h3>
-            <p className="d-flex mb-3 text-light align-items-start">
+            <p className="d-flex mb-3 text-light align-items-start justify-content-center justify-content-md-start">
               <i className="bi bi-geo-alt-fill me-3 text-white"></i>
               <span>Bloc A, 3ᵉ étage, bureau A1, Immeuble Henda, 10 rue de l’Île de Rhodes, 1053 Les Berges du Lac 2, Tunis, Tunisie</span>
             </p>
-            <a className="d-flex mb-3 text-light text-decoration-none" href="mailto:info@birdconsulting.com">
+            <a className="d-flex mb-3 text-light text-decoration-none justify-content-center justify-content-md-start" href="mailto:info@birdconsulting.com">
               <i className="bi bi-envelope-fill me-3 text-white"></i>
               <span>contact@bird-tc.com</span>
             </a>
-            <a className="d-flex mb-3 text-light text-decoration-none" href="tel://+21612345678">
+            <a className="d-flex mb-3 text-light text-decoration-none justify-content-center justify-content-md-start" href="tel://+21612345678">
               <i className="bi bi-telephone-fill me-3 text-white"></i>
               <span>+216 94 660 185</span>
             </a>
@@ -61,13 +59,13 @@ export default function Footer() {
           {/* Réseaux sociaux */}
           <div className="col-md-3 mb-5 mb-lg-0">
             <h3 className="mb-3 text-white">Réseaux sociaux</h3>
-            <a className="d-flex mb-3 text-white text-decoration-none" href="https://www.facebook.com/birdtrainingandconsulting" target="_blank" rel="noopener noreferrer">
+            <a className="d-flex mb-3 text-white text-decoration-none justify-content-center justify-content-md-start" href="https://www.facebook.com/birdtrainingandconsulting" target="_blank" rel="noopener noreferrer">
               <i className="bi bi-facebook me-3 text-white fs-5"></i><span>Facebook</span>
             </a>
-            <a className="d-flex mb-3 text-white text-decoration-none" href="https://www.instagram.com/birdtrainingandconsulting/" target="_blank" rel="noopener noreferrer">
+            <a className="d-flex mb-3 text-white text-decoration-none justify-content-center justify-content-md-start" href="https://www.instagram.com/birdtrainingandconsulting/" target="_blank" rel="noopener noreferrer">
               <i className="bi bi-instagram me-3 text-white fs-5"></i><span>Instagram</span>
             </a>
-            <a className="d-flex mb-3 text-white text-decoration-none" href="https://www.linkedin.com/company/bird-training-consulting" target="_blank" rel="noopener noreferrer">
+            <a className="d-flex mb-3 text-white text-decoration-none justify-content-center justify-content-md-start" href="https://www.linkedin.com/company/bird-training-consulting" target="_blank" rel="noopener noreferrer">
               <i className="bi bi-linkedin me-3 text-white fs-5"></i><span>LinkedIn</span>
             </a>
           </div>

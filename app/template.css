@@ -1195,19 +1195,16 @@ Events Style
 
 /* IMAGE RESPONSIVE */
 .events .item .image img {
-  width: 100%; /* prend toute la largeur du parent */
-  max-width: 212px; /* taille maximale sur desktop */
+  width: 100%; 
+  max-width: 212px; 
   border-radius: 25px;
-  position: relative; /* pour permettre la date en absolute */
+ 
 }
 
 /* DATE SUR L'IMAGE */
-.events .item .image .date {
-  position: absolute;
-  top: 75%;           /* center vertically */
-  left: 10px;         /* distance from left edge */
-  transform: translateY(-50%) rotate(-90deg); /* rotate and center */
-  transform-origin: left center;             /* rotate around left */
+.events .item .date {
+ 
+  
   background-color: var(--bs-primary);
   color: #fff;
   padding: 5px 10px;
@@ -1249,6 +1246,13 @@ Events Style
   text-align: left;
   font-weight: 600;
 }
+.events-footer {
+  background-color: var(--bs-primary);
+  padding: 20px 0;
+  border-radius: 0 0 25px 25px; /* rounded corners only at the bottom */
+  margin-top: 40px; /* spacing from events cards */
+}
+
 
 .events .item ul li span {
   display: inline-block;
@@ -1263,10 +1267,11 @@ Events Style
   font-weight: 600;
 }
 
-.events .item a {
+.events .item a.event-arrow {
   position: absolute;
   right: 0;
-  top: 22px;
+  top: 50%;
+    transform: translateY(-50%);
   background-color: var(--bs-primary);
   width: 60px;
   height: 120px;
@@ -1289,7 +1294,7 @@ Events Style
     max-width: 100%;
   }
 
-  .events .item a {
+  .events .item a.event-arrow {
     display: flex;
     justify-content: center; /* horizontal */
     align-items: center; /* vertical */

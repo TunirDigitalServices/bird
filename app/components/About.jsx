@@ -105,7 +105,7 @@ export default function About() {
               <Image
                 className="img-fluid rounded-4"
                 src="/images/about_6-min.jpg"
-                alt="FreeBootstrap.net image placeholder"
+                alt="About Bird Training & Consulting"
                 width={680}
                 height={400}
                 data-aos="fade-up"

@@ -7,11 +7,11 @@ export default function Events() {
   const events = [
     {
       slug: "pourquoi-lintelligence-artificielle",
-      img: "/images/imen3.jpg",
-      date: "19 Décembre 2025",
-      category: "Innovation & AI",
-      title: "Pourquoi l’intelligence artificielle ?",
-      location: "Tunis, Tunisie",
+      img: "/images/eventPost.jpg",
+      date: "19 Décembre 2025 — 15h00",
+      category: "19 Décembre 2025 — 15h00",
+      title: "Séminaire Découverte : Pourquoi l’intelligence artificielle ?",
+      location: "Le Corail Suites Hotel -Berges du Lac 2",
       speaker: "Animé par: Imen Regaïeg", // <-- new field
     },
   ];
@@ -21,11 +21,9 @@ export default function Events() {
       <div className="container">
         <div className="row mb-5">
           <div className="col-md-8 mx-auto text-center">
-            <span className="subtitle text-uppercase mb-3">
-              Notre Événements
-            </span>
+            <span className="subtitle text-uppercase mb-3">Nos Évènements</span>
             <h2 className="mb-3">
-              Découvrez nos prochaines formations, ateliers et workshops.
+              Explorez nos prochains ateliers, séminaires et formations.
             </h2>
           </div>
         </div>
@@ -44,7 +42,6 @@ export default function Events() {
                         height={150}
                         className="img-fluid"
                       />
-                      <div className="date">{event.date}</div>
                     </div>
                   </div>
 
@@ -61,9 +58,21 @@ export default function Events() {
                           <i className="fa fa-map-marker-alt me-1 "></i>
                           {event.location}
                         </p>
+                        {/* <div className="event-date d-flex justify-content-between align-items-center">{event.date} 
+                       </div> */}
                       </li>
+                      <Link
+                        href={`/events/${event.slug}#preinscription`}
+                        className="btn btn-primary py-2 "
+                      >
+                        Pré-inscription
+                      </Link>
                     </ul>
-                    <Link href={`/events/${event.slug}`}>
+
+                    <Link
+                      href={`/events/${event.slug}`}
+                      className="event-arrow"
+                    >
                       <i className="fa fa-angle-right"></i>
                     </Link>
                   </div>
@@ -73,7 +82,11 @@ export default function Events() {
           ))}
         </div>
       </div>
-      
+      <div className="events-footer text-center">
+        <p className="m-0 text-white fw-semibold">
+          Organisé par : BIRD TRAINING & CONSULTING
+        </p>
+      </div>
     </section>
   );
 }
