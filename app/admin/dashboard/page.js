@@ -82,22 +82,26 @@ export default function AdminDashboard() {
 
   return (
     <div className="container py-5" style={{ marginTop: "80px" }}>
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h2>Admin Dashboard</h2>
-        <div>
-          {activeTab === "preinscriptions" && (
-            <a
-              href="/api/preinscriptions?download=1"
-              className="btn btn-warning me-2"
-            >
-              Download CSV
-            </a>
-          )}
-          <button onClick={handleLogout} className="btn btn-danger">
-            Logout
-          </button>
-        </div>
-      </div>
+      <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4">
+  <h2 className="mb-2 mb-md-0">Admin Dashboard</h2>
+  <div className="d-flex flex-wrap gap-2">
+    {activeTab === "preinscriptions" && (
+      <a
+        href="/api/preinscriptions?download=1"
+        className="btn btn-warning"
+        style={{background:"#C1A698"}}
+      >
+        Download CSV
+      </a>
+    )}
+    <button onClick={handleLogout} className="btn btn-danger"
+        style={{background:"#C1A698"}}
+    >
+      Logout
+    </button>
+  </div>
+</div>
+
 
       {/* Tab Bar */}
       <ul className="nav nav-tabs mb-4">
