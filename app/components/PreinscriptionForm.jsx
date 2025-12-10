@@ -206,7 +206,8 @@ const handleSubmit = async (e) => {
 
                 {/* Status messages */}
                 {status === "success" && (
-                  <p className="text-light mt-2">Préinscription réussie !</p>
+                  <p className="text-light mt-2">Préinscription réussie ! Merci, veuillez vérifier votre email de confirmation.
+</p>
                 )}
                 {status === "error" && (
                   <p className="text-danger mt-2">
