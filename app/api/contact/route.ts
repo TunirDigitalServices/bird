@@ -1,5 +1,5 @@
 // app/api/contact/route.ts
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { PrismaClient } from "../../generated/prisma/client";
 
 // Crée une instance unique pour éviter plusieurs connexions en dev
@@ -28,6 +28,24 @@ export async function POST(req: Request) {
     return NextResponse.json({ message: "Message envoyé avec succès", saved });
   } catch (err: any) {
     console.error("POST /api/contact error:", err);
+    return NextResponse.json({ error: err.message }, { status: 500 });
+  }
+
+
+
+
+
+  
+}
+
+export async function GET(req: NextRequest) {
+  try {
+    const messages = await prisma.contactMessage.findMany({
+      orderBy: { createdAt: "desc" },
+    });
+    return NextResponse.json(messages);
+  } catch (err: any) {
+    console.error("GET /api/contact error:", err);
     return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }
