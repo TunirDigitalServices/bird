@@ -19,7 +19,8 @@ export default function EventDetail(props) {
       location: " Le Corail Suites Hotel -Berges du Lac 2",
       img: "/images/hero-bg.jpg",
       description:
-        "Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet accusamus error amet eius aut accusantium et. Non odit consequatur repudiandae sequi ea odio molestiae. Enim possimus sunt inventore in est ut optio sequi unde.",
+        "Découvrez comment l’intelligence artificielle transforme nos métiers, nos organisations et notre manière de décider. Cet événement vous aidera à comprendre les enjeux, les opportunités et les limites de l’IA afin de mieux l’intégrer dans votre stratégie professionnelle.",
+
       about: {
         where: " Le Corail Suites Hotel -Berges du Lac 2",
         when: "Vendredi\n19 Décembre 2025",
@@ -30,36 +31,37 @@ export default function EventDetail(props) {
 
   const speakers = [
     {
-      name: "Dr. Amina Ben Salah",
-      role: "Spécialiste IA",
-      img: "/images/member-01.jpg",
-      facebook: "#",
-      twitter: "#",
-      linkedin: "#",
+      name: "Imen Regaieg",
+      role: "Head of Corporate Commitments Monitoring & Control – ATB Bank",
+      img: "/images/imenBBackground.jpg",
+      facebook: "https://www.facebook.com/birdtrainingandconsulting",
+      twitter: "https://www.linkedin.com/company/bird-training-consulting/",
+      linkedin: "https://www.instagram.com/birdtrainingandconsulting/",
     },
   ];
-  const facts = [
-    {
-      title: "Quand",
-      value: "12 Déc 2025",
-      icon: "fas fa-calendar-alt",
-    },
-    {
-      title: "Où",
-      value: "Tunis, Tunisie",
-      icon: "fas fa-map-marker-alt",
-    },
-    {
-      title: "Tickets",
-      value: "1500",
-      icon: "fas fa-ticket-alt",
-    },
-    {
-      title: "Intervenants",
-      value: "10",
-      icon: "fas fa-microphone",
-    },
-  ];
+const facts = [
+  {
+    icon: "bi bi-geo-alt",
+    value: "Où",
+    title: "Le Corail Suites Hotel – Berges du Lac 2",
+  },
+  {
+    icon: "bi bi-calendar-event",
+    value: "Quand",
+    title: "19 Décembre 2025",
+  },
+  {
+    icon: "bi bi-mic",
+    value: "Intervenants",
+    title: "Experts en IA & Management",
+  },
+  {
+    icon: "bi bi-people",
+    value: "Public",
+    title: "Professionnels & décideurs",
+  },
+];
+
 
   useEffect(() => {
     new PureCounter(); // Initialize PureCounter on client-side
@@ -93,11 +95,8 @@ export default function EventDetail(props) {
             {event.date}, {event.location}
           </p>
 
-          <div data-aos="fade-up" data-aos-delay="300" className="">
-            <a
-              href={event.youtube}
-              className="glightbox pulsating-play-btn mt-3"
-            ></a>
+          <div className="pulsating-circle mt-3">
+            <span className="circle-icon">AI</span>
           </div>
         </div>
 
@@ -158,20 +157,20 @@ export default function EventDetail(props) {
                     />
                     <span className="category">{speaker.role}</span>
                     <h4>{speaker.name}</h4>
-                    <ul className="social-icons">
+                    <ul className="social-icons centered-icons">
                       <li>
                         <a href={speaker.facebook}>
-                          <i className="fab fa-facebook"></i>
+                          <i className="fab fa-facebook-f"></i>
                         </a>
                       </li>
                       <li>
-                        <a href={speaker.twitter}>
-                          <i className="fab fa-twitter"></i>
+                        <a href={speaker.instagram}>
+                          <i className="fab fa-instagram"></i>
                         </a>
                       </li>
                       <li>
                         <a href={speaker.linkedin}>
-                          <i className="fab fa-linkedin"></i>
+                          <i className="fab fa-linkedin-in"></i>
                         </a>
                       </li>
                     </ul>
@@ -230,8 +229,8 @@ export default function EventDetail(props) {
       </div>
 
       <PreinscriptionForm />
-      <Schedule />
-      <EventTestimonials />
+      {/* <Schedule />
+      <EventTestimonials /> */}
     </>
   );
 }
