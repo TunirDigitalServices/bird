@@ -2,9 +2,8 @@
 
 import { useEffect } from "react";
 
-
 export default function Stats() {
- useEffect(() => {
+  useEffect(() => {
     import("@srexi/purecounterjs").then((module) => {
       new module.default();
     });
@@ -17,65 +16,67 @@ export default function Stats() {
           <div className="col-lg-12">
             <div className="wrapper">
               <div className="row ">
-                {/* Happy Students */}
+
+                {/* Professionnels formés */}
                 <div className="col-lg-3 col-md-6">
                   <div className="counter">
                     <h2
                       className="timer count-title count-number purecounter"
                       data-purecounter-start="0"
-                      data-purecounter-end="500"
+                      data-purecounter-end="1200"
                       data-purecounter-duration="2"
                     >
                       0
                     </h2>
-                    <p className="count-text">Happy Students</p>
+                    <p className="count-text">Professionnels formés</p>
                   </div>
                 </div>
 
-                {/* Course Hours */}
+                {/* Formations réalisées */}
                 <div className="col-lg-3 col-md-6">
                   <div className="counter">
                     <h2
                       className="timer count-title count-number purecounter"
                       data-purecounter-start="0"
-                      data-purecounter-end="900"
+                      data-purecounter-end="2500"
                       data-purecounter-duration="2"
                     >
                       0
                     </h2>
-                    <p className="count-text">Course Hours</p>
+                    <p className="count-text">Formations réalisées</p>
                   </div>
                 </div>
 
-                {/* Companies Accompanied */}
+                {/* Entreprises accompagnées */}
                 <div className="col-lg-3 col-md-6">
                   <div className="counter">
                     <h2
                       className="timer count-title count-number purecounter"
                       data-purecounter-start="0"
-                      data-purecounter-end="75"
+                      data-purecounter-end="85"
                       data-purecounter-duration="2"
                     >
                       0
                     </h2>
-                    <p className="count-text">Companies Accompanied</p>
+                    <p className="count-text">Entreprises accompagnées</p>
                   </div>
                 </div>
 
-                {/* Years Experience */}
+                {/* Années d’expertise */}
                 <div className="col-lg-3 col-md-6">
                   <div className="counter end">
                     <h2
                       className="timer count-title count-number purecounter"
                       data-purecounter-start="0"
-                      data-purecounter-end="10"
+                      data-purecounter-end="12"
                       data-purecounter-duration="2"
                     >
                       0
                     </h2>
-                    <p className="count-text">Years Experience</p>
+                    <p className="count-text">Années d’expertise</p>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>

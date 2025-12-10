@@ -16,13 +16,29 @@ export default function Contact() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Simulate success response
-    setStatus("success");
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setTimeout(() => setStatus(""), 5000);
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      setStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } else {
+      setStatus("error");
+    }
+  } catch (err) {
+    setStatus("error");
+    console.error(err);
+  }
+
+  setTimeout(() => setStatus(""), 5000);
+};
+
 
   return (
     <section className="section contact__v2 bg-light py-5" id="contact">
