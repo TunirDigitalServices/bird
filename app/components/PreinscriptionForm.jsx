@@ -34,12 +34,12 @@ export default function PreinscriptionForm() {
     } else {
       console.error("Server error:", data); // <-- see error details
       setStatus("error");
-      alert("Server error: " + data.error); // <-- optional popup for debug
+      // alert("Server error: " + data.error); 
     }
   } catch (err) {
     console.error("Client error:", err);
     setStatus("error");
-    alert("Client error: " + err.message);
+    // alert("Client error: " + err.message);
   }
 
   setTimeout(() => setStatus(""), 5000);
