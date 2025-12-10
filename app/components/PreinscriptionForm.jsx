@@ -28,6 +28,40 @@ export default function PreinscriptionForm() {
     if (status !== "idle") setStatus("idle");
   };
 
+
+
+
+  //  const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const res = await fetch("/api/preinscriptions", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(formData),
+  //     });
+
+  //     const data = await res.json(); // <-- read JSON from response
+
+  //     if (res.ok) {
+  //       setStatus("success");
+  //       setFormData({ name: "", email: "", phone: "", message: "" });
+  //     } else {
+  //       console.error("Server error:", data); // <-- see error details
+  //       setStatus("error");
+  //       alert("Server error: " + data.error);
+  //     }
+  //   } catch (err) {
+  //     console.error("Client error:", err);
+  //     setStatus("error");
+  //     alert("Client error: " + err.message);
+  //   }
+
+  //   setTimeout(() => setStatus(""), 5000);
+  // };
+
+
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
