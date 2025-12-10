@@ -31,7 +31,7 @@ export default function EventDetail(props) {
 
   const speakers = [
     {
-      name: "Imen Regaiieg",
+      name: "Imen Regaieg",
       role: "Head of Corporate Commitments Monitoring & Control – ATB Bank",
       img: "/images/imenBBackground.jpg",
       facebook: "https://www.facebook.com/birdtrainingandconsulting",
