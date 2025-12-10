@@ -8,12 +8,11 @@ generator client {
   provider = "prisma-client"
   
   output   = "../app/generated/prisma"
-  binaryTargets = ["native", "debian-openssl-3.0.x"]
-
+  
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgres"
   url      = env("DATABASE_URL")
 }
 
