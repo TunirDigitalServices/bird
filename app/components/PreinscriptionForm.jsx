@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Modal } from "bootstrap";
 
 export default function PreinscriptionForm() {
   const [formData, setFormData] = useState({
@@ -18,77 +19,64 @@ export default function PreinscriptionForm() {
     if (status !== "idle") setStatus("idle"); // hide previous message
   };
 
-
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
   e.preventDefault();
   setStatus("loading");
 
   try {
-    // Send email to company
     await emailjs.send(
       "service_j7j635n",
-      "template_hla3wdr", // Template ID
+      "template_hla3wdr",
       {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
         message: formData.message,
       },
-      "F2kUjPKkZVikgZw4-" // EmailJS public key
-    );
-
-    // Send confirmation email to user
-    await emailjs.send(
-      "service_j7j635n",
-      "template_oe2bdlm", // Template ID
-      {
-        name: formData.name,
-        email: formData.email,
-      },
       "F2kUjPKkZVikgZw4-"
     );
 
     setStatus("success");
     setFormData({ name: "", email: "", phone: "", message: "" });
+
+    // Show modal
+    // const modal = new Modal(document.getElementById("successModal"));
+    // modal.show();
   } catch (err) {
     console.error("EmailJS error:", err);
     setStatus("error");
   }
-
-  setTimeout(() => setStatus(""), 5000);
 };
 
 
 
+  //  const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const res = await fetch("/api/preinscriptions", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(formData),
+  //     });
 
+  //     const data = await res.json(); // <-- read JSON from response
 
-//  const handleSubmit = async (e) => {
-//   e.preventDefault();
-//   try {
-//     const res = await fetch("/api/preinscriptions", {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify(formData),
-//     });
+  //     if (res.ok) {
+  //       setStatus("success");
+  //       setFormData({ name: "", email: "", phone: "", message: "" });
+  //     } else {
+  //       console.error("Server error:", data); // <-- see error details
+  //       setStatus("error");
+  //       alert("Server error: " + data.error);
+  //     }
+  //   } catch (err) {
+  //     console.error("Client error:", err);
+  //     setStatus("error");
+  //     alert("Client error: " + err.message);
+  //   }
 
-//     const data = await res.json(); // <-- read JSON from response
-
-//     if (res.ok) {
-//       setStatus("success");
-//       setFormData({ name: "", email: "", phone: "", message: "" });
-//     } else {
-//       console.error("Server error:", data); // <-- see error details
-//       setStatus("error");
-//       alert("Server error: " + data.error); 
-//     }
-//   } catch (err) {
-//     console.error("Client error:", err);
-//     setStatus("error");
-//     alert("Client error: " + err.message);
-//   }
-
-//   setTimeout(() => setStatus(""), 5000);
-// };
+  //   setTimeout(() => setStatus(""), 5000);
+  // };
 
   return (
     <div className="contact-us preinscription section" id="preinscription">
@@ -206,8 +194,9 @@ const handleSubmit = async (e) => {
 
                 {/* Status messages */}
                 {status === "success" && (
-                  <p className="text-light mt-2">Préinscription réussie ! Merci, veuillez vérifier votre email de confirmation.
-</p>
+                  <p className="text-light mt-2">
+                    Préinscription réussie ! Nous vous appellerons prochainement.
+                  </p>
                 )}
                 {status === "error" && (
                   <p className="text-danger mt-2">
@@ -215,6 +204,42 @@ const handleSubmit = async (e) => {
                   </p>
                 )}
               </form>
+              {/* <div
+  className="modal fade"
+  id="successModal"
+  tabIndex="-1"
+  aria-labelledby="successModalLabel"
+  aria-hidden="true"
+>
+  <div className="modal-dialog modal-dialog-centered">
+    <div className="modal-content">
+      <div className="modal-header bg-success text-white">
+        <h5 className="modal-title" id="successModalLabel">
+          Préinscription réussie
+        </h5>
+        <button
+          type="button"
+          className="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div className="modal-body">
+        Merci ! Nous vous appellerons prochainement.
+      </div>
+      <div className="modal-footer">
+        <button
+          type="button"
+          className="btn btn-success"
+          data-bs-dismiss="modal"
+        >
+          OK
+        </button>
+      </div>
+    </div>
+  </div>
+</div> */}
+
             </div>
           </div>
         </div>
