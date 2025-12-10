@@ -1,6 +1,7 @@
 // app/api/contact/route.ts
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "../../generated/prisma/client";
+import { PrismaClient } from "@prisma/client";
+
 
 // Crée une instance unique pour éviter plusieurs connexions en dev
 const prisma = new PrismaClient();

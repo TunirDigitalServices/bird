@@ -1,19 +1,10 @@
 // app/api/preinscriptions/route.ts
 import { NextResponse } from "next/server";
-import { PrismaClient } from "../../generated/prisma/client";
+import { PrismaClient } from "@prisma/client";
 
-let prisma: PrismaClient;
 
-declare global {
-  var prisma: PrismaClient | undefined;
-}
-
-if (!globalThis.prisma) {
-  // No options, just default constructor
-  globalThis.prisma = new PrismaClient();
-}
-
-prisma = globalThis.prisma;
+// Crée une instance unique pour éviter plusieurs connexions en dev
+const prisma = new PrismaClient();
 
 // POST
 export async function POST(req: Request) {
