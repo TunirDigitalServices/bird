@@ -2,87 +2,79 @@
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Modal } from "bootstrap";
+import Modal from "../components/Politiques";
 
 export default function PreinscriptionForm() {
-  const [formData, setFormData] = useState({
-    name: "",
+ const [formData, setFormData] = useState({
+    prenom: "",
+    nom: "",
     email: "",
-    phone: "",
+    telephone: "",
+    statut: "",
+    domaine: "",
     message: "",
+    consentement: false,
   });
-  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+
+  const [status, setStatus] = useState("idle");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    if (status !== "idle") setStatus("idle"); // hide previous message
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+    if (status !== "idle") setStatus("idle");
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  setStatus("loading");
+    e.preventDefault();
 
-  try {
-    await emailjs.send(
+    if (!formData.consentement) {
+      alert("Vous devez accepter la Politique de confidentialité.");
+      return;
+    }
+
+    setStatus("loading");
+
+    try {
+      await emailjs.send(
       "service_j7j635n",
       "template_hla3wdr",
-      {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        message: formData.message,
-      },
-      "F2kUjPKkZVikgZw4-"
-    );
+        {
+          prenom: formData.prenom,
+          nom: formData.nom,
+          email: formData.email,
+          telephone: formData.telephone,
+          statut: formData.statut,
+          domaine: formData.domaine,
+          message: formData.message,
+        },
+        "F2kUjPKkZVikgZw4-"
+      );
 
-    setStatus("success");
-    setFormData({ name: "", email: "", phone: "", message: "" });
-
-    // Show modal
-    // const modal = new Modal(document.getElementById("successModal"));
-    // modal.show();
-  } catch (err) {
-    console.error("EmailJS error:", err);
-    setStatus("error");
-  }
-};
-
-
-
-  //  const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const res = await fetch("/api/preinscriptions", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(formData),
-  //     });
-
-  //     const data = await res.json(); // <-- read JSON from response
-
-  //     if (res.ok) {
-  //       setStatus("success");
-  //       setFormData({ name: "", email: "", phone: "", message: "" });
-  //     } else {
-  //       console.error("Server error:", data); // <-- see error details
-  //       setStatus("error");
-  //       alert("Server error: " + data.error);
-  //     }
-  //   } catch (err) {
-  //     console.error("Client error:", err);
-  //     setStatus("error");
-  //     alert("Client error: " + err.message);
-  //   }
-
-  //   setTimeout(() => setStatus(""), 5000);
-  // };
+      setStatus("success");
+      setFormData({
+        prenom: "",
+        nom: "",
+        email: "",
+        telephone: "",
+        statut: "",
+        domaine: "",
+        message: "",
+        consentement: false,
+      });
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    }
+  };
 
   return (
     <div className="contact-us preinscription section" id="preinscription">
       <div className="container">
         <div className="row">
-          {/* Section gauche : Informations */}
           <div className="col-lg-4 align-self-center">
             <div className="section-heading">
               <h6 className="subtitle">Préinscription</h6>
@@ -91,55 +83,48 @@ export default function PreinscriptionForm() {
                 Remplissez ce formulaire pour réserver votre place. Vous
                 recevrez un email de confirmation avec tous les détails.
               </p>
-              {/* <div className="special-offer">
-                <span className="offer">
-                  off
-                  <br />
-                  <em>50%</em>
-                </span>
-                <h6>
-                  Valide jusqu'au: <em>12 Déc 2025</em>
-                </h6>
-                <h4>
-                  Offre <em>50%</em>!
-                </h4>
-                <a href="#">
-                  <i className="fa fa-angle-right"></i>
-                </a>
-              </div> */}
             </div>
           </div>
 
-          {/* Section droite : Formulaire */}
           <div className="col-lg-8">
             <div className="contact-us-content">
               <form id="contact-form" onSubmit={handleSubmit}>
                 <div className="row">
-                  {/* Nom */}
-                  <div className="col-lg-12">
+                  {/* Prénom */}
+                  <div className="col-lg-6">
                     <fieldset>
                       <input
                         type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Votre Nom..."
-                        autoComplete="on"
-                        value={formData.name}
+                        name="prenom"
+                        placeholder="Prénom"
+                        value={formData.prenom}
                         onChange={handleChange}
-                        // required
+                        required
+                      />
+                    </fieldset>
+                  </div>
+
+                  {/* Nom */}
+                  <div className="col-lg-6">
+                    <fieldset>
+                      <input
+                        type="text"
+                        name="nom"
+                        placeholder="Nom"
+                        value={formData.nom}
+                        onChange={handleChange}
+                        required
                       />
                     </fieldset>
                   </div>
 
                   {/* Email */}
-                  <div className="col-lg-12">
+                  <div className="col-lg-6">
                     <fieldset>
                       <input
                         type="email"
                         name="email"
-                        id="email"
-                        pattern="[^ @]*@[^ @]*"
-                        placeholder="Votre Email..."
+                        placeholder="Adresse email"
                         value={formData.email}
                         onChange={handleChange}
                         required
@@ -147,35 +132,96 @@ export default function PreinscriptionForm() {
                     </fieldset>
                   </div>
 
-                  {/* Numéro de téléphone */}
-                  <div className="col-lg-12">
+                  {/* Téléphone */}
+                  <div className="col-lg-6">
                     <fieldset>
                       <input
                         type="tel"
-                        name="phone"
-                        id="phone"
-                        placeholder="Votre Numéro de Téléphone..."
-                        value={formData.phone}
+                        name="telephone"
+                        placeholder="Numéro de téléphone"
+                        value={formData.telephone}
                         onChange={handleChange}
                         required
                       />
                     </fieldset>
                   </div>
 
-                  {/* Message / Commentaire */}
+                  {/* Statut */}
+                  <div className="col-lg-6">
+                    <fieldset>
+                      <select
+                        name="statut"
+                        value={formData.statut}
+                        onChange={handleChange}
+                        required
+                      >
+                        <option value="">Sélectionnez votre statut</option>
+                        <option>Particulier</option>
+                        <option>Étudiant</option>
+                        <option>Entreprise</option>
+                        <option>Organisation / Association</option>
+                      </select>
+                    </fieldset>
+                  </div>
+
+                  {/* Domaine (optionnel) */}
+                  <div className="col-lg-6">
+                    <fieldset>
+                      <select
+                        name="domaine"
+                        value={formData.domaine}
+                        onChange={handleChange}
+                      >
+                        <option value="">Domaine d’activité (optionnel)</option>
+                        <option>Santé</option>
+                        <option>Éducation</option>
+                        <option>IT / Informatique</option>
+                        <option>Finance</option>
+                        <option>Marketing / Communication</option>
+                        <option>Commerce</option>
+                        <option>Autre</option>
+                      </select>
+                    </fieldset>
+                  </div>
+
+                  {/* Message / Commentaire (optionnel) */}
                   <div className="col-lg-12">
                     <fieldset>
                       <textarea
                         name="message"
-                        id="message"
-                        placeholder="Votre message ou commentaire..."
+                        placeholder="Message / Commentaire (optionnel)"
                         value={formData.message}
                         onChange={handleChange}
-                      ></textarea>
+                      />
                     </fieldset>
                   </div>
 
-                  {/* Bouton envoyer */}
+                  {/* Consentement */}
+                  <div className="col-lg-12">
+                    <div className="form-check">
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        id="consentement"
+                        name="consentement"
+                        checked={formData.consentement}
+                        onChange={handleChange}
+                        required
+                      />
+                      <label className="form-check-label" htmlFor="consentement">
+                        J’ai lu et j’accepte la{" "}
+                        <button
+                          type="button"
+                          onClick={() => setIsModalOpen(true)}
+                        >
+                          Politique de confidentialité
+                        </button>
+                        .
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* Bouton d'envoi */}
                   <div className="col-lg-12">
                     <fieldset>
                       <button
@@ -186,60 +232,62 @@ export default function PreinscriptionForm() {
                       >
                         {status === "loading"
                           ? "Envoi..."
-                          : "Préinscription maintenant"}
+                          : "S’inscrire maintenant"}
                       </button>
                     </fieldset>
                   </div>
+
+                  {/* Messages de statut */}
+                  {status === "success" && (
+                    <p className="text-light mt-2">
+                      Préinscription réussie ! Nous vous contacterons prochainement.
+                    </p>
+                  )}
+                  {status === "error" && (
+                    <p className="text-danger mt-2">
+                      Erreur, veuillez réessayer.
+                    </p>
+                  )}
                 </div>
-
-                {/* Status messages */}
-                {status === "success" && (
-                  <p className="text-light mt-2">
-                    Préinscription réussie ! Nous vous appellerons prochainement.
-                  </p>
-                )}
-                {status === "error" && (
-                  <p className="text-danger mt-2">
-                    Erreur, veuillez réessayer.
-                  </p>
-                )}
               </form>
-              {/* <div
-  className="modal fade"
-  id="successModal"
-  tabIndex="-1"
-  aria-labelledby="successModalLabel"
-  aria-hidden="true"
->
-  <div className="modal-dialog modal-dialog-centered">
-    <div className="modal-content">
-      <div className="modal-header bg-success text-white">
-        <h5 className="modal-title" id="successModalLabel">
-          Préinscription réussie
-        </h5>
-        <button
-          type="button"
-          className="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div className="modal-body">
-        Merci ! Nous vous appellerons prochainement.
-      </div>
-      <div className="modal-footer">
-        <button
-          type="button"
-          className="btn btn-success"
-          data-bs-dismiss="modal"
-        >
-          OK
-        </button>
-      </div>
-    </div>
-  </div>
-</div> */}
 
+              {/* Politique de confidentialité Modal */}
+              <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+                <h5> POLITIQUE DE CONFIDENTIALITÉ</h5>
+                <p>
+                  1. Finalité du traitement Les informations collectées (nom,
+                  prénom, email, téléphone, statut et domaine d’activité) sont
+                  utilisées uniquement pour : gérer votre inscription au
+                  séminaire, vous envoyer les informations pratiques liées à
+                  l’événement, vous contacter si nécessaire.
+                </p>
+                <p>
+                  2. Durée de conservation Vos données seront conservées jusqu’à
+                  la fin du séminaire, puis supprimées dans un délai maximal de
+                  6 mois après l’événement.
+                </p>
+                <p>
+                  3. Partage des données Vos données ne sont jamais transmises à
+                  des tiers, sauf obligation légale prévue par la loi
+                  tunisienne.
+                </p>
+                <p>
+                  4. Base légale Le traitement repose sur votre consentement
+                  explicite, donné lors de l’inscription.
+                </p>
+                <p>
+                  5. Vos droits (Loi tunisienne n°2004-63) Vous disposez d’un
+                  droit : d’accès à vos données, de rectification, d’opposition
+                  au traitement, de suppression. Pour exercer vos droits,
+                  contactez : contact@bird-tc.com
+                </p>
+                <p>
+                  6. Sécurité des données Vos données sont traitées de manière
+                  sécurisée et accessibles uniquement aux personnes autorisées
+                  participant à l’organisation du séminaire.
+                </p>
+                <p>7. Responsable du traitement : BIRD Training & Consulting</p>
+              </Modal>
             </div>
           </div>
         </div>

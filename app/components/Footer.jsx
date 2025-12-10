@@ -23,7 +23,9 @@ export default function Footer() {
           <div className="col-md-3 mb-5 mb-lg-0">
             <h3 className="mb-3 text-white">À propos</h3>
             <p className="mb-4 text-light">
-              Bird Consulting & Training aide les entreprises à se développer grâce à des formations sur mesure, du consulting et des solutions basées sur l'IA.
+              Bird Consulting & Training aide les entreprises à se développer
+              grâce à des formations sur mesure, du consulting et des solutions
+              basées sur l'IA.
             </p>
           </div>
 
@@ -31,11 +33,37 @@ export default function Footer() {
           <div className="col-md-3 mb-5 mb-lg-0">
             <h3 className="mb-3 text-white">Entreprise</h3>
             <ul className="list-unstyled">
-              <li><a href="#about" className="text-light text-decoration-none">À propos</a></li>
-              <li><a href="#how-it-works" className="text-light text-decoration-none">Comment ça marche?</a></li>
-              <li><a href="#services" className="text-light text-decoration-none">Nos services</a></li>
-              <li><a href="#evennement" className="text-light text-decoration-none">Nos Évènements</a></li>
-              <li><a href="#benefits" className="text-light text-decoration-none">Ce que vous gagnez</a></li>
+              <li>
+                <a href="#about" className="text-light text-decoration-none">
+                  À propos
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#how-it-works"
+                  className="text-light text-decoration-none"
+                >
+                  Comment ça marche?
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-light text-decoration-none">
+                  Nos services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#evennement"
+                  className="text-light text-decoration-none"
+                >
+                  Nos Évènements
+                </a>
+              </li>
+              <li>
+                <a href="#benefits" className="text-light text-decoration-none">
+                  Ce que vous gagnez
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -44,13 +72,22 @@ export default function Footer() {
             <h3 className="mb-3 text-white">Contact</h3>
             <p className="d-flex mb-3 text-light align-items-start justify-content-center justify-content-md-start">
               <i className="bi bi-geo-alt-fill me-3 text-white"></i>
-              <span>Bloc A, 3ᵉ étage, bureau A1, Immeuble Henda, 10 rue de l’Île de Rhodes, 1053 Les Berges du Lac 2, Tunis, Tunisie</span>
+              <span>
+                Bloc A, 3ᵉ étage, bureau A1, Immeuble Henda, 10 rue de l’Île de
+                Rhodes, 1053 Les Berges du Lac 2, Tunis, Tunisie
+              </span>
             </p>
-            <a className="d-flex mb-3 text-light text-decoration-none justify-content-center justify-content-md-start" href="mailto:info@birdconsulting.com">
+            <a
+              className="d-flex mb-3 text-light text-decoration-none justify-content-center justify-content-md-start"
+              href="mailto:contact@bird-tc.com"
+            >
               <i className="bi bi-envelope-fill me-3 text-white"></i>
               <span>contact@bird-tc.com</span>
             </a>
-            <a className="d-flex mb-3 text-light text-decoration-none justify-content-center justify-content-md-start" href="tel://+21612345678">
+            <a
+              className="d-flex mb-3 text-light text-decoration-none justify-content-center justify-content-md-start"
+              href="tel://+21612345678"
+            >
               <i className="bi bi-telephone-fill me-3 text-white"></i>
               <span>+216 94 660 185</span>
             </a>
@@ -59,14 +96,32 @@ export default function Footer() {
           {/* Réseaux sociaux */}
           <div className="col-md-3 mb-5 mb-lg-0">
             <h3 className="mb-3 text-white">Réseaux sociaux</h3>
-            <a className="d-flex mb-3 text-white text-decoration-none justify-content-center justify-content-md-start" href="https://www.facebook.com/birdtrainingandconsulting" target="_blank" rel="noopener noreferrer">
-              <i className="bi bi-facebook me-3 text-white fs-5"></i><span>Facebook</span>
+            <a
+              className="d-flex mb-3 text-white text-decoration-none justify-content-center justify-content-md-start"
+              href="https://www.facebook.com/birdtrainingandconsulting"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bi bi-facebook me-3 text-white fs-5"></i>
+              <span>Facebook</span>
             </a>
-            <a className="d-flex mb-3 text-white text-decoration-none justify-content-center justify-content-md-start" href="https://www.instagram.com/birdtrainingandconsulting/" target="_blank" rel="noopener noreferrer">
-              <i className="bi bi-instagram me-3 text-white fs-5"></i><span>Instagram</span>
+            <a
+              className="d-flex mb-3 text-white text-decoration-none justify-content-center justify-content-md-start"
+              href="https://www.instagram.com/birdtrainingandconsulting/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bi bi-instagram me-3 text-white fs-5"></i>
+              <span>Instagram</span>
             </a>
-            <a className="d-flex mb-3 text-white text-decoration-none justify-content-center justify-content-md-start" href="https://www.linkedin.com/company/bird-training-consulting" target="_blank" rel="noopener noreferrer">
-              <i className="bi bi-linkedin me-3 text-white fs-5"></i><span>LinkedIn</span>
+            <a
+              className="d-flex mb-3 text-white text-decoration-none justify-content-center justify-content-md-start"
+              href="https://www.linkedin.com/company/bird-training-consulting"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bi bi-linkedin me-3 text-white fs-5"></i>
+              <span>LinkedIn</span>
             </a>
           </div>
         </div>
@@ -74,9 +129,15 @@ export default function Footer() {
         {/* Footer Credits */}
         <div className="row credits pt-3 border-top border-light">
           <div className="col-xl-8 text-center text-xl-start mb-3 mb-xl-0 text-light">
-            &copy; {new Date().getFullYear()} Bird Consulting & Training. All rights reserved. Designed with
+            &copy; {new Date().getFullYear()} Bird Consulting & Training. All
+            rights reserved. Designed with
             <i className="bi bi-heart-fill text-danger mx-1"></i> by
-            <a href="https://tunirdigital.com" className="text-light ms-1 text-decoration-none">Tunir Digital</a>
+            <a
+              href="https://tunirdigital.com"
+              className="text-light ms-1 text-decoration-none"
+            >
+              Tunir Digital
+            </a>
           </div>
         </div>
       </div>

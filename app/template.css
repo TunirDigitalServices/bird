@@ -2201,6 +2201,83 @@ Contact Style
   opacity: 0.8;
 }
 
+/* Make the select basic like normal input but keep arrow */
+#contact-form select {
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;          /* small round to keep normal look */
+  background-color: #fff;       /* white background */
+  border: 1px solid #ccc;       /* normal border */
+  color: #000;                  /* black text inside */
+  padding: 0 40px 0 10px;       /* space for arrow */
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L5 6L10 0H0Z' fill='black'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 6px;
+}
+
+/* Options inside select */
+#contact-form select option {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Placeholder option color */
+#contact-form select option[value=""] {
+  color: #aaa;
+}
+
+/* Checkbox container */
+#contact-form .form-check {
+  display: flex;
+  align-items: center; /* vertical center */
+  gap: 10px;           /* space between checkbox and label */
+  margin-bottom: 30px;
+}
+
+/* Checkbox input */
+#contact-form .form-check input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  background-color: transparent;
+  accent-color: #ffc107; /* yellow checkmark */
+  cursor: pointer;
+  flex-shrink: 0;        /* prevent shrinking */
+}
+
+/* Label text */
+#contact-form .form-check label {
+  color: #fff;
+  font-weight: 400;
+  display: flex;
+  align-items: start;   /* vertical center for label + button */
+  gap: 5px;              /* small space between text and button */
+  cursor: pointer;
+}
+
+/* Modal link inside label */
+#contact-form .form-check label button {
+  display: flex;
+  margin-top: 5;
+  padding: 0;
+  background: none;
+  align-items: start;
+  border: none;
+  color: #ffc107;        /* yellow link */
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: inherit;
+  line-height: normal;
+}
+
+
 .contact-us-content .more-info {
   text-align: center;
   background: rgb(85,0,227);
@@ -2226,6 +2303,45 @@ Contact Style
   font-weight: 400;
 }
 
+/* Style the select like your inputs */
+#contact-form select {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background-color: rgba(249, 235, 255, 0.15);
+  border: none;
+  outline: none;
+  font-weight: 300;
+  padding: 0 50px 0 20px; /* leave space for arrow */
+  font-size: 14px;
+  color: #fff; /* text inside the select */
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 3;
+  -webkit-appearance: none; /* remove default arrow */
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+
+  /* Custom arrow */
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L5 6L10 0H0Z' fill='white'/%3E%3C/svg%3E"); 
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 10px 6px;
+}
+
+/* Options inside select */
+#contact-form select option {
+  background-color: #fff; /* white background for options */
+  color: #000; /* black text */
+}
+
+/* Optional placeholder color */
+#contact-form select option[value=""] {
+  color: #aaa;
+}
+/* Checkbox label text */
+/* Basic checkbox label */
 
 .EventTestimonials {
   position: relative;
