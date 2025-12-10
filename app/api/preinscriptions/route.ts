@@ -34,7 +34,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ message: "Préinscription enregistrée", saved });
   } catch (err: any) {
     console.error("POST /api/preinscriptions error:", err);
-    return NextResponse.json({ error: err.message }, { status: 500 });
+  return NextResponse.json(
+    { error: err.message, stack: err.stack }, // <-- debug info
+    { status: 500 }
+  );
   }
 }
 
