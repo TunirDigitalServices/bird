@@ -16,7 +16,7 @@ export default function Hero() {
                   data-aos="fade-up"
                   data-aos-delay="0"
                 >
-                Management Centré sur l’Humain & IA
+                Management Centré sur l’Humain et IA
                 </span>
 
                 <h1
