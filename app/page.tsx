@@ -27,7 +27,7 @@ export default function Home() {
          <Events/>
          <Testimonials/>
          <Faq/>
-         <ContactUs/>
+         {/* <ContactUs/> */}
          <CallToAction/>
    </>
   );
