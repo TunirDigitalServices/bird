@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function PreinscriptionForm() {
   const [formData, setFormData] = useState({
@@ -17,33 +18,77 @@ export default function PreinscriptionForm() {
     if (status !== "idle") setStatus("idle"); // hide previous message
   };
 
- const handleSubmit = async (e) => {
+
+const handleSubmit = async (e) => {
   e.preventDefault();
+  setStatus("loading");
+
   try {
-    const res = await fetch("/api/preinscriptions", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    // Send email to company
+    await emailjs.send(
+      "service_j7j635n",
+      "template_hla3wdr", // Template ID
+      {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+      },
+      "F2kUjPKkZVikgZw4-" // EmailJS public key
+    );
 
-    const data = await res.json(); // <-- read JSON from response
+    // Send confirmation email to user
+    await emailjs.send(
+      "service_j7j635n",
+      "template_oe2bdlm", // Template ID
+      {
+        name: formData.name,
+        email: formData.email,
+      },
+      "F2kUjPKkZVikgZw4-"
+    );
 
-    if (res.ok) {
-      setStatus("success");
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    } else {
-      console.error("Server error:", data); // <-- see error details
-      setStatus("error");
-      alert("Server error: " + data.error); 
-    }
+    setStatus("success");
+    setFormData({ name: "", email: "", phone: "", message: "" });
   } catch (err) {
-    console.error("Client error:", err);
+    console.error("EmailJS error:", err);
     setStatus("error");
-    alert("Client error: " + err.message);
   }
 
   setTimeout(() => setStatus(""), 5000);
 };
+
+
+
+
+
+//  const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   try {
+//     const res = await fetch("/api/preinscriptions", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify(formData),
+//     });
+
+//     const data = await res.json(); // <-- read JSON from response
+
+//     if (res.ok) {
+//       setStatus("success");
+//       setFormData({ name: "", email: "", phone: "", message: "" });
+//     } else {
+//       console.error("Server error:", data); // <-- see error details
+//       setStatus("error");
+//       alert("Server error: " + data.error); 
+//     }
+//   } catch (err) {
+//     console.error("Client error:", err);
+//     setStatus("error");
+//     alert("Client error: " + err.message);
+//   }
+
+//   setTimeout(() => setStatus(""), 5000);
+// };
 
   return (
     <div className="contact-us preinscription section" id="preinscription">
