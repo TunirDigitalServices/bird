@@ -19,7 +19,7 @@ export default function EventDetail(props) {
       location: " Le Corail Suites Hotel -Berges du Lac 2",
       img: "/images/hero-bg.jpg",
       description:
-        "Découvrez comment l’intelligence artificielle transforme nos métiers, nos organisations et notre manière de décider. Cet événement vous aidera à comprendre les enjeux, les opportunités et les limites de l’IA afin de mieux l’intégrer dans votre stratégie professionnelle.",
+        "Découvrez comment l’Intelligence Artificielle peut vous faire gagner du temps, stimuler votre créativité et simplifier vos décisions. Ce séminaire vous donnera des clés claires pour comprendre l’IA et ses applications concrètes dans votre quotidien professionnel.",
 
       about: {
         where: " Le Corail Suites Hotel -Berges du Lac 2",
@@ -32,36 +32,35 @@ export default function EventDetail(props) {
   const speakers = [
     {
       name: "Imen Regaieg",
-      role: "Head of Corporate Commitments Monitoring & Control - ATB Bank",
+      role: "Directrice bancaire et formatrice en finance, management et IA",
       img: "/images/imenBBackground.jpg",
-      facebook: "https://www.facebook.com/birdtrainingandconsulting",
-      twitter: "https://www.linkedin.com/company/bird-training-consulting/",
-      linkedin: "https://www.instagram.com/birdtrainingandconsulting/",
+      // facebook: "https://www.facebook.com/birdtrainingandconsulting",
+      // twitter: "https://www.linkedin.com/company/bird-training-consulting/",
+      linkedin: "linkedin.com/in/imenregaiegghammam/",
     },
   ];
-const facts = [
-  {
-    icon: "bi bi-geo-alt",
-    value: "Où",
-    title: "Le Corail Suites Hotel – Berges du Lac 2",
-  },
-  {
-    icon: "bi bi-calendar-event",
-    value: "Quand",
-    title: "19 Décembre 2025",
-  },
-  {
-    icon: "bi bi-mic",
-    value: "Intervenants",
-    title: "Experts en IA & Management",
-  },
-  {
-    icon: "bi bi-people",
-    value: "Public",
-    title: "Professionnels & décideurs",
-  },
-];
-
+  const facts = [
+    {
+      icon: "bi bi-geo-alt",
+      value: "Où",
+      title: "Le Corail Suites Hotel – Berges du Lac 2",
+    },
+    {
+      icon: "bi bi-calendar-event",
+      value: "Quand",
+      title: "19 Décembre 2025",
+    },
+    {
+      icon: "bi bi-mic",
+      value: "Intervenant",
+      title: "Expert en IA appliquée & Management",
+    },
+    {
+      icon: "bi bi-people",
+      value: "Public",
+      title: "Professionnels & décideurs",
+    },
+  ];
 
   useEffect(() => {
     new PureCounter(); // Initialize PureCounter on client-side
@@ -112,13 +111,13 @@ const facts = [
 
               {/* Where */}
               <div className="col-lg-4 ms-auto text-end">
-                <h3>Where</h3>
+                <h3> Où </h3>
                 <p>{event.about.where}</p>
               </div>
 
               {/* When */}
               <div className="col-lg-4 text-end">
-                <h3>When</h3>
+                <h3> Quand </h3>
                 <p style={{ whiteSpace: "pre-line" }}>{event.about.when}</p>
               </div>
             </div>
@@ -135,10 +134,11 @@ const facts = [
                 data-aos="fade-up"
                 data-aos-delay="0"
               >
-                Nos Intervenants
+                NOTRE INTERVENANT
+
               </span>
               <h2 className="mb-3" data-aos="fade-up" data-aos-delay="50">
-                Découvrez les experts qui vous guideront
+               Découvrez l’expert qui vous guidera
               </h2>
             </div>
           </div>
@@ -158,7 +158,7 @@ const facts = [
                     <span className="category">{speaker.role}</span>
                     <h4>{speaker.name}</h4>
                     <ul className="social-icons centered-icons">
-                      <li>
+                      {/* <li>
                         <a href={speaker.facebook}>
                           <i className="fab fa-facebook-f"></i>
                         </a>
@@ -167,7 +167,7 @@ const facts = [
                         <a href={speaker.instagram}>
                           <i className="fab fa-instagram"></i>
                         </a>
-                      </li>
+                      </li> */}
                       <li>
                         <a href={speaker.linkedin}>
                           <i className="fab fa-linkedin-in"></i>

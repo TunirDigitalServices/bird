@@ -289,38 +289,38 @@ export default function PreinscriptionForm() {
               <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
                 <h5> POLITIQUE DE CONFIDENTIALITÉ</h5>
                 <p>
-                  1. Finalité du traitement Les informations collectées (nom,
+                  <strong> 1. Finalité du traitement :</strong> Les informations collectées (nom,
                   prénom, email, téléphone, statut et domaine d’activité) sont
                   utilisées uniquement pour : gérer votre inscription au
                   séminaire, vous envoyer les informations pratiques liées à
                   l’événement, vous contacter si nécessaire.
                 </p>
                 <p>
-                  2. Durée de conservation Vos données seront conservées jusqu’à
+                   <strong> 2. Durée de conservation : </strong> Vos données seront conservées jusqu’à
                   la fin du séminaire, puis supprimées dans un délai maximal de
                   6 mois après l’événement.
                 </p>
                 <p>
-                  3. Partage des données Vos données ne sont jamais transmises à
+                  <strong>3. Partage des données : </strong> Vos données ne sont jamais transmises à
                   des tiers, sauf obligation légale prévue par la loi
                   tunisienne.
                 </p>
                 <p>
-                  4. Base légale Le traitement repose sur votre consentement
+                  <strong>4. Base légale : </strong> Le traitement repose sur votre consentement
                   explicite, donné lors de l’inscription.
                 </p>
                 <p>
-                  5. Vos droits (Loi tunisienne n°2004-63) Vous disposez d’un
+                  <strong>5. Vos droits (Loi tunisienne n°2004-63) : </strong> Vous disposez d’un
                   droit : d’accès à vos données, de rectification, d’opposition
                   au traitement, de suppression. Pour exercer vos droits,
                   contactez : contact@bird-tc.com
                 </p>
                 <p>
-                  6. Sécurité des données Vos données sont traitées de manière
+                  <strong>6. Sécurité des données : </strong> Vos données sont traitées de manière
                   sécurisée et accessibles uniquement aux personnes autorisées
                   participant à l’organisation du séminaire.
                 </p>
-                <p>7. Responsable du traitement : BIRD Training & Consulting</p>
+                <p> <strong>7. Responsable du traitement : </strong>BIRD Training & Consulting</p>
               </Modal>
             </div>
           </div>

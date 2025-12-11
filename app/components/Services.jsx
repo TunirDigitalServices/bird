@@ -23,6 +23,7 @@ export default function Services() {
             { icon: "bi-diagram-3-fill", title: "Séminaires", desc: "Prendre du recul et renforcer l’intelligence collective.", delay: 200 },
             { icon: "bi-people-fill", title: "Formations ciblées", desc: "Innovation, IA appliquée, management, communication, finance, gestion des projets et des risques.", delay: 250 },
             { icon: "bi-robot", title: "Intégration progressive de l’innovation et de l’IA", desc: " Comprendre, tester et adopter ces leviers, toujours avec l’humain au centre.", delay: 300 },
+            { icon: "bi-mortarboard", title: "Masterclass", desc: "explorer et approfondir vos compétences", delay: 300 },
      
           ].map((service, index) => (
             <div
