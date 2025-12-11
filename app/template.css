@@ -1511,7 +1511,7 @@ width: 100% !important;
   border-radius: 0.5rem;
   font-weight: bold;
   font-size: 0.9rem;
-  z-index: 10;
+  z-index: 5;
 
   /* Smooth size-only pulse */
   animation: pulse-scale 2.5s infinite ease-in-out;
@@ -1526,6 +1526,43 @@ width: 100% !important;
   }
 }
 
+.participation-badge {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ffefc2;
+  border: 2px solid #ffa500;
+  border-radius: 12px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.participation-badge span {
+  margin-right: 8px;
+}
+.ribbon {
+  position: relative;
+  background: #ff8c00;
+  color: white;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.participation-info {
+  background: #00196310;
+  border-left: 4px solid var(--bs-primary);
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.participation-info i {
+  margin-right: 8px;
+  color: var(--bs-primary);
+}
 
 
 

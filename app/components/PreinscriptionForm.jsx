@@ -113,7 +113,11 @@ export default function PreinscriptionForm() {
               </p>
 
                  
-    <p className="mb-1">Participation : 100 Dinars</p>
+  <div className="participation-info">
+  <i className="fa fa-info-circle"></i> Participation : <strong>100 Dinars</strong>
+</div>
+
+
     {/* <p className="mb-0">Places limitées !</p> */}
             </div>
           </div>
@@ -289,7 +293,7 @@ export default function PreinscriptionForm() {
               </form>
 
               {/* Politique de confidentialité Modal */}
-              <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+              <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} style={{zIndex:10}}>
                 <h5> POLITIQUE DE CONFIDENTIALITÉ</h5>
                 <p>
                   <strong> 1. Finalité du traitement :</strong> Les informations
