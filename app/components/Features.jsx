@@ -26,14 +26,14 @@ export default function Features() {
                           </p>
                         </div>
 
-                        <a
+                        {/* <a
                           className="glightbox btn btn-play d-inline-flex align-items-center gap-2"
                           href="https://www.youtube.com/watch?v=DQx96G4yHd8"
                           data-gallery="video"
                         >
                           <i className="bi bi-play-fill"></i> Voir la
                           présentation
-                        </a>
+                        </a> */}
                       </div>
                     </div>
                   </div>
