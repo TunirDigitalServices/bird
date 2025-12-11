@@ -16,21 +16,21 @@ export default function AboutUs() {
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingFive">
                     <button
-                   className="accordion-button" // removed 'collapsed'
-      type="button"
-      // removed data-bs-toggle so it can't be collapsed
-      aria-expanded="true"
-      aria-controls="collapseFive"
-      disabled // optional: prevents clicking
+                      className="accordion-button" // removed 'collapsed'
+                      type="button"
+                      // removed data-bs-toggle so it can't be collapsed
+                      aria-expanded="true"
+                      aria-controls="collapseFive"
+                      disabled // optional: prevents clicking
                     >
                       Pourquoi participer ?
                     </button>
                   </h2>
                   <div
-                     id="collapseFive"
-    className="accordion-collapse collapse show" // added 'show' to open by default
-    aria-labelledby="headingFive"
-    data-bs-parent="#accordionExample"
+                    id="collapseFive"
+                    className="accordion-collapse collapse show" // added 'show' to open by default
+                    aria-labelledby="headingFive"
+                    // data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
                       <ul>
@@ -88,7 +88,7 @@ export default function AboutUs() {
                     id="collapseSix"
                     className="accordion-collapse collapse"
                     aria-labelledby="headingSix"
-                    data-bs-parent="#accordionExample"
+                    // data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
                       <ul>
