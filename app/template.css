@@ -1498,7 +1498,9 @@ width: 100% !important;
   flex: 0 0 50px;
 }
 
-
+.justify-text {
+  text-align: justify;
+}
 .limited-badge {
   position: absolute;
   top: -10px;

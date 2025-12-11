@@ -32,7 +32,7 @@ export default function AboutUs() {
                     aria-labelledby="headingFive"
                     // data-bs-parent="#accordionExample"
                   >
-                    <div className="accordion-body">
+                    <div className="accordion-body justify-text">
                       <ul>
                         <li>
                           {" "}
@@ -90,7 +90,7 @@ export default function AboutUs() {
                     aria-labelledby="headingSix"
                     // data-bs-parent="#accordionExample"
                   >
-                    <div className="accordion-body">
+                    <div className="accordion-body justify-text">
                       <ul>
                         <li>
                           Entrepreneurs, dirigeants, managers, formateurs…
@@ -110,15 +110,23 @@ export default function AboutUs() {
                 <h2 style={{ fontSize: 30 }}>
                   Séminaire Découverte – Pourquoi l’Intelligence Artificielle ?
                 </h2>
-                <p>
+                <p className="justify-text">
                   Cette session découverte propose une introduction simple et
                   accessible à l’Intelligence Artificielle. Elle vous permettra
-                  de : Définir l’IA sans jargon Découvrir son utilité concrète
-                  dans le quotidien professionnel Comprendre comment l’IA peut
+                  de : 
+                  <br />
+                  <br />
+                  <ul>
+                    <li>Définir l’IA sans jargon</li>
+                    <li> Découvrir son utilité concrète
+                  dans le quotidien professionnel </li>
+                  <li>Comprendre comment l’IA peut
                   vous faire gagner du temps, stimuler votre créativité et
-                  faciliter la prise de décision Explorer des exemples
+                  faciliter la prise de décision</li>
+                  <li>  Explorer des exemples
                   d’applications concrètes de l’IA, adaptées à différents
-                  profils
+                  profils</li>
+                  </ul>
                 </p>
                 {/* <div className="main-button">
                   <a href="#inscription">S’inscrire</a>
