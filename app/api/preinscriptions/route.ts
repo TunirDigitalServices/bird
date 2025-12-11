@@ -1,36 +1,48 @@
 // app/api/preinscriptions/route.ts
 import { NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
+import Brevo from "@getbrevo/brevo";
 
 
 // Crée une instance unique pour éviter plusieurs connexions en dev
 const prisma = new PrismaClient();
 
+
+
+
+
+
+
+
+
+
+
+
 // POST
-export async function POST(req: Request) {
-  try {
-    const data = await req.json();
+// export async function POST(req: Request) {
+//   try {
+//     const data = await req.json();
    
 
-    const saved = await prisma.preInscription.create({
-      data: {
-        fullName: data.name,
-        email: data.email,
-        phone: data.phone,
-        message: data.message,
+//     const saved = await prisma.preInscription.create({
+//       data: {
+//         fullName: data.name,
+//         email: data.email,
+//         phone: data.phone,
+//         message: data.message,
         
-      },
-    });
+//       },
+//     });
 
-    return NextResponse.json({ message: "Préinscription enregistrée", saved });
-  } catch (err: any) {
-    console.error("POST /api/preinscriptions error:", err);
-  return NextResponse.json(
-    { error: err.message, stack: err.stack }, // <-- debug info
-    { status: 500 }
-  );
-  }
-}
+//     return NextResponse.json({ message: "Préinscription enregistrée", saved });
+//   } catch (err: any) {
+//     console.error("POST /api/preinscriptions error:", err);
+//   return NextResponse.json(
+//     { error: err.message, stack: err.stack }, // <-- debug info
+//     { status: 500 }
+//   );
+//   }
+// }
 
 // GET
 export async function GET(req: Request) {

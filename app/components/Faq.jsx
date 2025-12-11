@@ -7,9 +7,9 @@ import { useState } from "react";
 export default function FAQ() {
   const faqs = [
     {
-      question: "Quels services propose Bird Consulting & Training ?",
+      question: "Quels services propose Bird Training & Consulting ?",
       answer:
-        "Nous proposons des programmes de formation sur le management et l'IA, du consulting pour optimiser vos processus et stratégies, ainsi que des solutions numériques et IA pour améliorer la productivité et la prise de décision.",
+        "Nous proposons des services sur mesure en accompagnement, conseil et formation, Pour plus de détails, consultez notre page Services.",
     },
     {
       question: "Combien coûtent vos services ?",
@@ -17,17 +17,20 @@ export default function FAQ() {
         "Les tarifs dépendent de la nature du service choisi, de la durée des formations et de la complexité du projet de consulting. Après un premier échange, nous vous fournirons un devis personnalisé adapté à vos besoins.",
     },
     {
-      question: "Combien de temps dure une formation ou un projet de consulting ?",
+      question:
+        "Combien de temps dure une formation ou un projet de consulting ?",
       answer:
         "La durée varie selon le programme ou le projet. Une formation standard peut durer quelques jours à quelques semaines, tandis qu'un projet de consulting complet peut s'étendre sur plusieurs mois selon les objectifs définis.",
     },
     {
-      question: "Les solutions proposées sont-elles adaptées aux entreprises de toutes tailles ?",
+      question:
+        "Les solutions proposées sont-elles adaptées aux entreprises de toutes tailles ?",
       answer:
         "Oui, nos services sont conçus pour s'adapter aux besoins des petites, moyennes et grandes entreprises. Chaque programme est personnalisé pour maximiser l'impact sur votre organisation.",
     },
     {
-      question: "Proposez-vous un accompagnement après la formation ou le consulting ?",
+      question:
+        "Proposez-vous un accompagnement après la formation ou le consulting ?",
       answer:
         "Oui, nous offrons un suivi post-formation et post-consulting pour assurer l'intégration des acquis et l'amélioration continue des performances de vos équipes.",
     },
@@ -47,7 +50,8 @@ export default function FAQ() {
             <span className="subtitle text-uppercase mb-3">FAQ</span>
             <h2 className="h2 fw-bold mb-3">Questions Fréquentes</h2>
             <p>
-              Retrouvez ici les réponses aux questions les plus courantes sur nos services de formation, consulting et solutions basées sur l'IA.
+              Retrouvez ici les réponses aux questions les plus courantes sur
+              nos services de conseil et d’accompagnement.
             </p>
           </div>
         </div>
@@ -60,11 +64,7 @@ export default function FAQ() {
                   <Accordion.Header
                     onClick={() => handleToggle(index.toString())}
                   >
-                    <span
-                    
-                    >
-                      {faq.question}
-                    </span>
+                    <span>{faq.question}</span>
                   </Accordion.Header>
                   <Accordion.Body>{faq.answer}</Accordion.Body>
                 </Accordion.Item>

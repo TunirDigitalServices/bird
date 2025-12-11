@@ -31,7 +31,7 @@ export default function About() {
                     Nous combinons{" "}
                     <strong>
                       conseil, ateliers pratiques, séminaires et formations
-                    </strong>
+                    </strong>{" "}
                     pour transformer vos idées en projets concrets et orienter
                     durablement votre développement.
                   </p>

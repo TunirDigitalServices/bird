@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser"; 
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -16,29 +17,32 @@ export default function Contact() {
     setFormData({ ...formData, [name]: value });
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  try {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus(""); // reset status
 
-    if (res.ok) {
+    try {
+      await emailjs.send(
+        "service_j7j635n",
+        "template_3ddjjjp",
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "F2kUjPKkZVikgZw4-"
+      );
+
       setStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
-    } else {
+    } catch (err) {
+      console.error(err);
       setStatus("error");
     }
-  } catch (err) {
-    setStatus("error");
-    console.error(err);
-  }
 
-  setTimeout(() => setStatus(""), 5000);
-};
-
+    setTimeout(() => setStatus(""), 5000);
+  };
 
   return (
     <section className="section contact__v2 bg-light py-5" id="contact">

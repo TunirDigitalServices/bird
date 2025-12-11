@@ -23,9 +23,9 @@ export default function Footer() {
           <div className="col-md-3 mb-5 mb-lg-0">
             <h3 className="mb-3 text-white">À propos</h3>
             <p className="mb-4 text-light">
-              Bird Consulting & Training aide les entreprises à se développer
-              grâce à des formations sur mesure, du consulting et des solutions
-              basées sur l'IA.
+              Bird Training & Consulting accompagne vos projets, développe vos
+              équipes et intègre l’innovation et l’intelligence artificielle,
+              toujours au service de l’humain.
             </p>
           </div>
 
