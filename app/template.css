@@ -1411,6 +1411,7 @@ Events Style
   .contact-us::before {
     display: none;
   }
+  
   .about-us .section-heading p,
   .EventTestimonials .section-heading p,
   .contact-us .section-heading p {
@@ -1496,6 +1497,35 @@ width: 100% !important;
   -ms-flex: 0 0 50px;
   flex: 0 0 50px;
 }
+
+
+.limited-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #dc3545;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  z-index: 10;
+
+  /* Smooth size-only pulse */
+  animation: pulse-scale 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* smaller scale to reduce visual dimming */
+  }
+}
+
+
+
 
 .contact__v2 .subtitle {
   background-color: #fff;
@@ -1685,6 +1715,11 @@ footer::before {
     padding-left: 10px !important;
     padding-right: 10px !important;
 
+}
+.limited-badge {
+  position: absolute;
+  top: -25px;
+  right: -10px;
 }
 
 

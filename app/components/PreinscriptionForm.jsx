@@ -109,31 +109,26 @@ export default function PreinscriptionForm() {
     <div className="contact-us preinscription section" id="preinscription">
       <div className="container">
         <div className="row">
-     <div className="col-lg-4 align-self-center">
+   <div className="col-lg-4 align-self-center">
   <div className="section-heading">
     <h6 className="subtitle">Préinscription</h6>
-    <h2>Inscrivez-vous dès maintenant à notre événement</h2>
+    <h2>Réservez votre place dès maintenant !</h2>
     <p>
       Une occasion d’aborder l’IA de manière simple et utile, et de repartir avec des repères concrets pour vos projets !
     </p>
 
-    {/* Styled additional info */}
-    <p>
-      <span className="badge bg-primary me-1">Réservez votre place dès maintenant !</span>
-    </p>
-    <p>
-      <span className="badge bg-success me-1">Participation : 100 Dinars</span>
-    </p>
-    <p>
-      <span className="badge bg-danger me-1">Places limitées !</span>
-    </p>
+{/*    
+    <p className="mb-1">Participation : 100 Dinars</p>
+    <p className="mb-0">Places limitées !</p> */}
   </div>
 </div>
 
 
 
-
-          <div className="col-lg-8">
+          <div className="col-lg-8 position-relative">
+            <div className="limited-badge">
+    Places limitées !
+  </div>
             <div className="contact-us-content">
               <form id="contact-form" onSubmit={handleSubmit}>
                 <div className="row">

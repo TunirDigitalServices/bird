@@ -234,7 +234,7 @@ export default function EventDetail(props) {
       </div>
 
       <PreinscriptionForm />
-      <Schedule />
+      {/* <Schedule /> */}
       {/* <EventTestimonials /> */}
     </>
   );
