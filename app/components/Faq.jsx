@@ -43,13 +43,13 @@ export default function FAQ() {
   };
 
   return (
-    <section className="section faq__v2" id="faq">
+    <section className="section faq__v2  justify-text" id="faq">
       <div className="container">
         <div className="row mb-4">
           <div className="col-md-8 col-lg-7 mx-auto text-center">
             <span className="subtitle text-uppercase mb-3">FAQ</span>
             <h2 className="h2 fw-bold mb-3">Questions Fréquentes</h2>
-            <p>
+            <p className=" justify-text">
               Retrouvez ici les réponses aux questions les plus courantes sur
               nos services de conseil et d’accompagnement.
             </p>

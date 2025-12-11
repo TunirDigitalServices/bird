@@ -42,7 +42,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="section testimonials__v2" id="testimonials">
+    <section className="section testimonials__v2 justify-text" id="testimonials">
       <div className="container">
         {/* Section Heading */}
         <div className="row mb-5">
@@ -54,10 +54,10 @@ export default function Testimonials() {
             >
               Témoignages
             </span>
-            <h2 className="mb-3" data-aos="fade-up" data-aos-delay="100">
+            <h2 className="mb-3  " data-aos="fade-up" data-aos-delay="100">
               Ce que nos clients disent
             </h2>
-            <p data-aos="fade-up" data-aos-delay="200">
+            <p data-aos="fade-up" data-aos-delay="200" className=" justify-text">
               Des histoires réelles de succès et de satisfaction provenant de
               notre communauté de clients et partenaires.
             </p>

@@ -16,13 +16,12 @@ export default function Features() {
                         <div>
                           <h2 className="mb-4">Notre philosophie</h2>
                           <p className="mb-3 justify-text">
-                            Chez Bird, nous croyons qu’une{" "}
-                            performance durable commence par
-                            l’humain. L’innovation et l’
-                            intelligence artificielle ne
-                            remplacent pas les compétences humaines : elles les
-                           <strong> amplifient</strong>  lorsqu’elles sont intégrées de manière{" "}
-                            progressive et adaptée à votre
+                            Chez Bird, nous croyons qu’une performance durable
+                            commence par l’humain. L’innovation et
+                            l’intelligence artificielle ne remplacent pas les
+                            compétences humaines : elles les
+                            <strong> amplifient</strong> lorsqu’elles sont
+                            intégrées de manière progressive et adaptée à votre
                             réalité.
                           </p>
                         </div>
@@ -62,7 +61,9 @@ export default function Features() {
                             <i className="bi bi-graph-up fs-4"></i>
                           </div>
                           <h3 className="fs-6 fw-bold mb-2">Évolutive</h3>
-                          <p className="justify-text">Adaptée à votre rythme et à vos besoins.</p>
+                          <p className="justify-text">
+                            Adaptée à votre rythme et à vos besoins.
+                          </p>
                         </div>
 
                         <div

@@ -17,7 +17,7 @@ export default function Events() {
   ];
 
   return (
-    <section className="section events " id="evennement">
+    <section className="section events justify-text" id="evennement">
       <div className="container">
         <div className="row mb-5">
           <div className="col-md-8 mx-auto text-center">

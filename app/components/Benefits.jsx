@@ -32,7 +32,7 @@ export default function CeQueVousGagnez() {
           {/* Section droite : Liste des gains */}
           <div className="col-lg-6">
             <div className="contact-us-content">
-              <ul className="list-unstyled text-light justify-text">
+              <ul className="list-unstyled text-light ">
                 <li>✔ Clarté sur vos projets et priorités</li>
                 <li>✔ Équipes renforcées et autonomes</li>
                 <li>✔ Décisions plus éclairées grâce aux outils intelligents</li>

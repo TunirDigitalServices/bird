@@ -59,7 +59,7 @@ export default function Contact() {
             <h2 className="h2 fw-bold mb-3" data-aos="fade-up">
               Contactez Bird Consulting & Training
             </h2>
-            <p data-aos="fade-up">
+            <p data-aos="fade-up" className=" justify-text">
               Vous avez des questions ou souhaitez être accompagné ?
               Contactez-nous et nos experts sont là pour vous guider.
             </p>

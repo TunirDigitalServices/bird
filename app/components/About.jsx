@@ -122,7 +122,7 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="text-uppercase">Notre mission</h3>
-                  <p className="fs-5 mb-0 justify-text">
+                  <p className="fs-5 mb-0 ">
                     Transformer vos idées en projets concrets et accompagner vos
                     équipes à intégrer l’innovation et l’intelligence
                     artificielle, toujours au service de l’humain.

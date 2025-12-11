@@ -14,7 +14,7 @@ export default function CallToAction() {
     >
       <div className="container">
         <h1
-          className="mb-0 text-light"
+          className="mb-0 text-light jutify-text"
           data-aos="fade-up"
           data-aos-delay="0"
           style={{ fontWeight: 600, lineHeight: 1.3 }}
