@@ -53,7 +53,7 @@ export default function AboutUs() {
                           <strong style={{ fontWeight: "600px" }}>
                             Découverte et perspectives :{" "}
                           </strong>{" "}
-                          Cette rencontre ouvre la voie à des workshops et
+                          cette rencontre ouvre la voie à des workshops et
                           masterclass plus approfondis proposés par Bird
                           Training & Consulting.
                         </li>
@@ -107,7 +107,7 @@ export default function AboutUs() {
             <div className="col-lg-5 align-self-center right-side-animator">
               <div className="section-heading">
                 <h6 className="subTitle">À propos du séminaire</h6>
-                <h2>
+                <h2 style={{ fontSize: 30 }}>
                   Séminaire Découverte – Pourquoi l’Intelligence Artificielle ?
                 </h2>
                 <p>

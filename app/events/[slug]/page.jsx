@@ -173,7 +173,7 @@ export default function EventDetail(props) {
                         <p className="mt-4"> 
                           Avec plus de 18 ans d’expérience dans le secteur
                           bancaire, Imen Regaïeg a développé une expertise
-                          solide en crédits, gestion des risques, suivi des
+                          solide en gestion des crédits et des risques, suivi des
                           engagements et reporting avancé, pilotant des équipes
                           et plusieurs projets clés.
                           </p>
