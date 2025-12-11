@@ -32,9 +32,10 @@ export default function EventDetail(props) {
 
   const speakers = [
     {
-      name: "Imen Regaieg",
+      name: "Imen Regaïeg — Directrice bancaire et formatrice en finance, management et IA appliquée",
       role: "Directrice bancaire et formatrice en finance, management et IA",
       img: "/images/imenBBackground.jpg",
+
       // facebook: "https://www.facebook.com/birdtrainingandconsulting",
       // twitter: "https://www.linkedin.com/company/bird-training-consulting/",
       linkedin: "linkedin.com/in/imenregaiegghammam/",
@@ -125,14 +126,12 @@ export default function EventDetail(props) {
           </div>
         </div>
       </section>
-<EventAPropos />
-
-
+      <EventAPropos />
 
       <div className="team section" id="team">
         <div className="container">
-          {/* Section Titre */}
-          <div className="row mb-5">
+          {/* Section Title */}
+          <div className="row">
             <div className="col-md-8 mx-auto text-center">
               <span
                 className="subtitle text-uppercase mb-3"
@@ -140,52 +139,83 @@ export default function EventDetail(props) {
                 data-aos-delay="0"
               >
                 NOTRE INTERVENANT
-
               </span>
               <h2 className="mb-3" data-aos="fade-up" data-aos-delay="50">
-               Découvrez l’expert qui vous guidera
+                Découvrez l’expert qui vous guidera
               </h2>
             </div>
           </div>
 
-          {/* Liste des intervenants */}
-          <div className="row g-4 mt-6">
-            {speakers.map((speaker, index) => (
-              <div key={index} className="col-lg-3 col-md-6">
-                <div className="team-member">
-                  <div className="main-content">
-                    <Image
-                      src={speaker.img}
-                      alt={speaker.name}
-                      width={220}
-                      height={220}
-                    />
-                    <span className="category">{speaker.role}</span>
-                    <h4>{speaker.name}</h4>
-                    <ul className="social-icons centered-icons">
-                      {/* <li>
-                        <a href={speaker.facebook}>
-                          <i className="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href={speaker.instagram}>
-                          <i className="fab fa-instagram"></i>
-                        </a>
-                      </li> */}
-                      <li>
-                        <a href={speaker.linkedin}>
-                          <i className="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                    </ul>
+          <div className="speakerInfo section" id="services">
+            <div className="container">
+              <div className="row">
+                {speakers.map((speaker, index) => (
+                  <div key={index} className="col-12">
+                    <div className="service-item">
+                      <div className="icon">
+                        <Image
+                          src={speaker.img}
+                          alt={speaker.name}
+                          width={170}
+                          height={170}
+                          className="rounded-circle"
+                        />
+                      </div>
+                      <div className="main-content text-start">
+                       <h4 style={{ lineHeight: 1.3 , color:"#001963"}}>
+  Imen Regaïeg —{" "}
+  <span className="speaker-rolee" style={{ fontSize: "0.9em", color: "#001963", display: "block", marginTop: "0.2em" }}>
+    Directrice bancaire et formatrice en finance, management et IA appliquée
+  </span>
+</h4>
+
+
+                        <p className="mt-4"> 
+                          Avec plus de 18 ans d’expérience dans le secteur
+                          bancaire, Imen Regaïeg a développé une expertise
+                          solide en crédits, gestion des risques, suivi des
+                          engagements et reporting avancé, pilotant des équipes
+                          et plusieurs projets clés.
+                          </p>
+                        <p>
+                          Formatrice certifiée, elle intervient sur la finance,
+                          le management et l’IA appliquée comme levier pour
+                          améliorer la prise de décision et l’efficacité
+                          professionnelle.
+                          </p>
+                          <p>
+                          Consultante et conférencière, Imen met son expérience
+                          au service de la transformation professionnelle, en
+                          aidant ses participants à intégrer les technologies de
+                          manière utile et concrète dans leur pratique.
+                          </p>
+                          <p>
+                          Elle mène également un projet de recherche sur
+                          l’intelligence artificielle appliquée à la prise de
+                          décision managériale et financière, explorant de
+                          nouvelles façons de combiner innovation et
+                          performance.
+                        </p>
+                        <div className="main-button">
+                          <a
+                            href={speaker.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="linkedin-circle"
+                          >
+                            <i className="fab fa-linkedin-in"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
+
       {/* stats */}
 
       <div className="section fun-facts">

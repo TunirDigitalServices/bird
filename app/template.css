@@ -1699,7 +1699,30 @@ footer::before {
   font-weight: 500;
   margin-top: 15px;
 }
+.speaker-rolee {
+  font-size: 16px;       /* smaller than the name */
+  color: var(--bs-primary);        /* lighter than the name */
+  font-weight: 500;       /* optional */
+}
+
 @media (max-width: 992px) {
+
+.speakerInfo .service-item .icon {
+  top: -125px !important;
+}
+
+  .speakerInfo .service-item .main-content{
+    margin-right: 0px !important;
+  }
+  .speakerInfo {
+    margin-top: 80px;
+  }
+ 
+  .speakerInfo .service-item .icon {
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+  }
   
   .fun-facts {
     margin-top: 70px;
@@ -3096,3 +3119,73 @@ h2.accordion-header button {
   margin-top: 50px;
 }
 
+
+
+.speakerInfo .service-item:hover .icon img {
+  margin-top: -10px;
+}
+.linkedin-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;             /* circle width */
+  height: 45px;            /* circle height */
+  background-color: var(--bs-primary); /* LinkedIn blue */
+  color: white;
+  border-radius: 50%;       /* makes it a circle */
+  font-size: 20px;
+  transition: transform 0.3s, background-color 0.3s;
+  text-decoration: none;
+}
+
+.linkedin-circle:hover {
+  background-color:var(--bs-primary); /* darker blue on hover */
+  transform: scale(1.1);     /* subtle hover effect */
+}
+
+
+.speakerInfo .service-item {
+  position: relative;
+  /* margin-top: 95px; */
+}
+
+.speakerInfo .service-item .icon {
+  width: 190px;
+  height: 190px;
+  display: inline-block;
+  text-align: center;
+  line-height: 190px;
+  background-color: var(--bs-primary);
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: -95px;
+}
+
+.speakerInfo .service-item .icon img {
+  max-width: 150px; /* bigger image */
+  max-height: 150px;
+  transition: all 0.2s;
+}
+
+.speakerInfo .service-item .main-content {
+  border-radius: 25px;
+  padding: 80px 30px 50px 30px;
+  background-color: #F1F0FE;
+  margin-bottom: 30px;
+  margin-right: 80px;
+  transition: all .4s;
+}
+
+.speakerInfo .service-item h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  line-height: 30px;
+  transition: all .4s;
+}
+
+.speakerInfo .service-item p {
+  color: #4a4a4a;
+  margin-bottom: 25px;
+}
