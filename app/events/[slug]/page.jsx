@@ -6,6 +6,7 @@ import PureCounter from "@srexi/purecounterjs";
 import PreinscriptionForm from "../../components/PreinscriptionForm";
 import EventTestimonials from "../../components/EventTestimonials";
 import Schedule from "../../components/Schedule";
+import EventAPropos from "../../components/EventAPropos";
 export default function EventDetail(props) {
   const params = use(props.params); // unwrap the Promise
   const slug = params.slug; // server component, safe to access directly
@@ -124,6 +125,10 @@ export default function EventDetail(props) {
           </div>
         </div>
       </section>
+<EventAPropos />
+
+
+
       <div className="team section" id="team">
         <div className="container">
           {/* Section Titre */}
@@ -229,8 +234,8 @@ export default function EventDetail(props) {
       </div>
 
       <PreinscriptionForm />
-      {/* <Schedule />
-      <EventTestimonials /> */}
+      <Schedule />
+      {/* <EventTestimonials /> */}
     </>
   );
 }

@@ -105,7 +105,7 @@ h6 {
 
 .EventTestimonials .section-heading {
     
-    margin-left: 60px;
+    margin-left: 0px;
 }
 
 
@@ -1438,6 +1438,42 @@ Events Style
   .testimonials .owl-nav {
     display: none;
   }
+  .EventAPropos {
+    margin-top: 100px;
+  }
+  .EventAPropos .section-heading {
+    margin-left: 20px !important;
+    margin-top: 120px;
+  }
+  .EventAPropos::before,
+  .testimonials::before,
+  .EventAPropos::before {
+    display: none;
+  }
+  .EventAPropos .section-heading p,
+  .testimonials .section-heading p,
+  .EventAPropos .section-heading p {
+    margin-top: 30px;
+  }
+  .EventAPropos .section-heading .main-button {
+    margin-top: 30px;
+  }
+  .EventAPropos .main-button a {
+    background-color: #7a6ad8;
+    color: #fff;
+  }
+
+
+   .events-footer {
+              gap: 10px !important; /* reduce gap on small screens */
+              justify-content: flex-start !important; /* align items to start */
+              text-align: start !important;
+              margin-left: 0 !important;
+width: 100% !important;
+            }
+            .animator {
+              margin-left: 0 !important;
+            }
 
 }
 
@@ -1645,6 +1681,12 @@ footer::before {
  
   padding: 31px !important;      
 }
+.accordion {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+}
+
 
 .footer {
    padding-top: 100 !important;
@@ -2914,4 +2956,108 @@ Contact Style
     justify-content: center;
   }
 }
-/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.EventAPropos {
+    position: relative;
+    padding: 0px;
+    margin-top: 130px;
+  }
+
+  .EventAPropos:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 84%;
+    height: 100%;
+    background-color: #F1F0FE;
+    content: '';
+    border-top-left-radius: 500px;
+    border-bottom-left-radius: 500px;
+  }
+
+.accordion {
+  margin-top: -40px;
+  margin-bottom: -40px;
+  background-color: var(--bs-primary);
+  border-radius: 40px;
+  padding: 80px 50px 50px 50px;
+}
+
+.accordion-item {
+  background-color: #fff;
+  border-radius: 40px !important;
+  margin-bottom: 30px;
+  border: none;
+}
+
+.accordion-item .accordion-button {
+  outline: none;
+  box-shadow: none;
+  border-radius: 40px !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--bs-primary);
+  background-color: #fff;
+}
+
+h2.accordion-header button {
+  padding: 15px 25px;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.accordion-button::after {
+  font-size: 18px;
+  font-weight: 500;
+  background-image: none;
+  content: '+';
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: none;
+  line-height: 32px;
+  content: '-';
+}
+
+.accordion-body {
+  padding: 0px 25px 30px 25px;
+  font-size: 14px;
+  line-height: 28px;
+  color: #4a4a4a;
+}
+
+.EventAPropos .section-heading {
+  margin-left: 60px;
+  margin-bottom: 0px;
+}
+
+.EventAPropos .section-heading .main-button {
+  margin-top: 50px;
+}
+

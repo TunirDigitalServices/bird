@@ -57,7 +57,7 @@ export default function FAQ() {
         </div>
 
         <div className="row">
-          <div className="mx-auto">
+          <div className="mx-auto mt-4">
             <Accordion activeKey={activeKey}>
               {faqs.map((faq, index) => (
                 <Accordion.Item eventKey={index.toString()} key={index}>

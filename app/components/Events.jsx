@@ -12,7 +12,7 @@ export default function Events() {
       category: "19 Décembre 2025 — 15h00",
       title: "Séminaire Découverte : Pourquoi l’intelligence artificielle ?",
       location: "Le Corail Suites Hotel -Berges du Lac 2",
-      speaker: "Animé par: Imen Regaïeg", // <-- new field
+      speaker: "Animé par:  Imen Regaïeg, Directrice bancaire et formatrice en finance, management et IA", 
     },
   ];
 
