@@ -20,7 +20,8 @@ export default function Hero() {
                 </span>
 
                 <h1
-                  className="hero-title mb-3"
+                  className="hero-title mb-3  "
+                 
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -29,7 +30,7 @@ export default function Hero() {
                 </h1>
 
                 <p
-                  className="hero-description mb-4 mb-lg-5"
+                  className="hero-description mb-4 mb-lg-5 justify-text"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >

@@ -9,7 +9,7 @@ export default function About() {
         <div className="row">
           <div className="col-md-6 order-md-2">
             <div className="row justify-content-end">
-              <div className="col-md-11 mb-4 mb-md-0">
+              <div className="col-md-11 mb-4 mb-md-0 ">
                 <span
                   className="subtitle text-uppercase mb-3"
                   data-aos="fade-up"
@@ -18,7 +18,7 @@ export default function About() {
                   Qui sommes-nous ?
                 </span>
 
-                <h2 className="mb-4" data-aos="fade-up" data-aos-delay="100">
+                <h2 className="mb-4 " data-aos="fade-up" data-aos-delay="100">
                   <strong>Bird Training & Consulting : Transformer vos idées, renforcer
                   vos équipes et innover avec sens.</strong>
                 </h2>
