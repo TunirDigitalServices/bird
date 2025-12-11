@@ -15,7 +15,7 @@ export default function HowItWorks() {
             <h2 data-aos="fade-up" data-aos-delay="100">
               Notre Processus
             </h2>
-            <p data-aos="fade-up" data-aos-delay="200">
+            <p data-aos="fade-up" data-aos-delay="200" className="justify-text">
               <strong>
                 Un processus clair et structuré pour faire avancer vos projets,
                 consolider vos équipes et intégrer l’innovation de manière
@@ -45,7 +45,7 @@ export default function HowItWorks() {
                 1
               </span>
               <h3 className="fs-5 mb-4">Analyse & diagnostic</h3>
-              <p>
+              <p  className="justify-text"> 
                 Nous évaluons vos besoins, vos équipes et vos objectifs pour
                 définir la meilleure stratégie et clarifier vos priorités.
               </p>
@@ -72,7 +72,7 @@ export default function HowItWorks() {
                 2
               </span>
               <h3 className="fs-5 mb-4">Plan d’action personnalisé</h3>
-              <p>
+              <p  className="justify-text">
                 Nous élaborons un programme adapté à votre organisation,
                 incluant conseils, ateliers ou séminaires ou formations selon
                 vos besoins et objectifs.
@@ -100,7 +100,7 @@ export default function HowItWorks() {
                 3
               </span>
               <h3 className="fs-5 mb-4">Mise en œuvre</h3>
-              <p>
+              <p  className="justify-text">
                 Accompagnement concret pour appliquer les recommandations et
                 expérimenter les solutions proposées.
               </p>
@@ -118,7 +118,7 @@ export default function HowItWorks() {
                 4
               </span>
               <h3 className="fs-5 mb-4">Suivi & amélioration</h3>
-              <p>
+              <p  className="justify-text">
                 Nous mesurons les progrès, ajustons les actions et vous
                 fournissons un suivi pour assurer un impact durable et des
                 résultats concrets.

@@ -9,7 +9,7 @@ export default function Services() {
             <span className="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">
               Nos services
             </span>
-            <h2 className="mb-3" data-aos="fade-up" data-aos-delay="50">
+            <h2 className="mb-3 text-start" data-aos="fade-up" data-aos-delay="50">
               Nous proposons des services modulables accessibles aux organisations et au public élargi.
             </h2>
           </div>
@@ -28,7 +28,7 @@ export default function Services() {
           ].map((service, index) => (
             <div
               key={index}
-              className="col-md-6 col-lg-4"
+              className="col-md-6 col-lg-4 justify-text"
               data-aos="fade-up"
               data-aos-delay={service.delay}
             >

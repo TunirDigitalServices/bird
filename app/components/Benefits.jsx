@@ -10,7 +10,7 @@ export default function CeQueVousGagnez() {
             <div className="section-heading">
               <h6 className="subtitle">Ce que vous gagnez</h6>
               <h2>Avec Bird, vous bénéficiez de :</h2>
-              <p>
+              <p  className="justify-text">
                 Grâce à notre accompagnement, vos projets avancent concrètement et vos équipes deviennent autonomes tout en intégrant progressivement l’innovation et l’IA.
               </p>
               {/* <div className="special-offer">
@@ -32,7 +32,7 @@ export default function CeQueVousGagnez() {
           {/* Section droite : Liste des gains */}
           <div className="col-lg-6">
             <div className="contact-us-content">
-              <ul className="list-unstyled text-light">
+              <ul className="list-unstyled text-light justify-text">
                 <li>✔ Clarté sur vos projets et priorités</li>
                 <li>✔ Équipes renforcées et autonomes</li>
                 <li>✔ Décisions plus éclairées grâce aux outils intelligents</li>

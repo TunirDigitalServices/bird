@@ -23,8 +23,8 @@ export default function About() {
                   vos équipes et innover avec sens.</strong>
                 </h2>
 
-                <div data-aos="fade-up" data-aos-delay="200">
-                  <p>
+                <div data-aos="fade-up" data-aos-delay="200" className="justify-text">
+                  <p >
                     Bird Training & Consulting est un cabinet de conseil dédié à
                     l’accompagnement des{" "}
                     <strong>entrepreneurs, managers et organisations.</strong>{" "}
@@ -55,7 +55,7 @@ export default function About() {
                 </h4>
 
                 <ul
-                  className="d-flex flex-row flex-wrap list-unstyled gap-3 features"
+                  className="d-flex flex-row flex-wrap list-unstyled gap-3 features justify-text"
                   data-aos="fade-up"
                   data-aos-delay="400"
                 >
@@ -122,7 +122,7 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="text-uppercase">Notre mission</h3>
-                  <p className="fs-5 mb-0">
+                  <p className="fs-5 mb-0 justify-text">
                     Transformer vos idées en projets concrets et accompagner vos
                     équipes à intégrer l’innovation et l’intelligence
                     artificielle, toujours au service de l’humain.

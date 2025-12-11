@@ -15,7 +15,7 @@ export default function Features() {
                       <div className="h-100 d-flex flex-column justify-content-between">
                         <div>
                           <h2 className="mb-4">Notre philosophie</h2>
-                          <p className="mb-3">
+                          <p className="mb-3 justify-text">
                             Chez Bird, nous croyons qu’une{" "}
                             performance durable commence par
                             l’humain. L’innovation et l’
@@ -62,11 +62,11 @@ export default function Features() {
                             <i className="bi bi-graph-up fs-4"></i>
                           </div>
                           <h3 className="fs-6 fw-bold mb-2">Évolutive</h3>
-                          <p>Adaptée à votre rythme et à vos besoins.</p>
+                          <p className="justify-text">Adaptée à votre rythme et à vos besoins.</p>
                         </div>
 
                         <div
-                          className="col-sm-6"
+                          className="col-sm-6 justify-text"
                           data-aos="fade-up"
                           data-aos-delay="200"
                         >
@@ -80,7 +80,7 @@ export default function Features() {
                         </div>
 
                         <div
-                          className="col-sm-6"
+                          className="col-sm-6 justify-text"
                           data-aos="fade-up"
                           data-aos-delay="300"
                         >
