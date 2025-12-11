@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import emailjs from "@emailjs/browser"; 
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -60,10 +60,8 @@ export default function Contact() {
               Contactez Bird Consulting & Training
             </h2>
             <p data-aos="fade-up">
-              Vous avez des questions sur nos programmes de formation, nos
-              services de consulting ou nos solutions basées sur l’IA ?
-              Contactez-nous et nos experts vous guideront pour développer le
-              potentiel de votre entreprise.
+              Vous avez des questions ou souhaitez être accompagné ?
+              Contactez-nous et nos experts sont là pour vous guider.
             </p>
           </div>
         </div>
