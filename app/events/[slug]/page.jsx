@@ -107,18 +107,18 @@ export default function EventDetail(props) {
             <div className="row align-items-start">
               {/* About */}
               <div className="col-lg-4">
-                <h2>À propos de l’événement</h2>
+                <h2 style={{fontSize:24}}>À propos de l’événement</h2>
                 <p>{event.description}</p>
               </div>
 
               {/* Where */}
-              <div className="col-lg-4 ms-auto text-end">
+              <div className="col-lg-4 ms-auto text-lg-end">
                 <h3> Où </h3>
                 <p>{event.about.where}</p>
               </div>
 
               {/* When */}
-              <div className="col-lg-4 text-end">
+              <div className="col-lg-4 text-lg-end">
                 <h3> Quand </h3>
                 <p style={{ whiteSpace: "pre-line" }}>{event.about.when}</p>
               </div>
