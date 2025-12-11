@@ -107,7 +107,7 @@ export default function EventDetail(props) {
             <div className="row align-items-start">
               {/* About */}
               <div className="col-lg-4">
-                <h2>About The Event</h2>
+                <h2>À propos de l’événement</h2>
                 <p>{event.description}</p>
               </div>
 
