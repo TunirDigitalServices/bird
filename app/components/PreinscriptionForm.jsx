@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import Modal from "../components/Politiques";
 
 export default function PreinscriptionForm() {
- const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     prenom: "",
     nom: "",
     email: "",
@@ -27,9 +27,6 @@ export default function PreinscriptionForm() {
     }));
     if (status !== "idle") setStatus("idle");
   };
-
-
-
 
   //  const handleSubmit = async (e) => {
   //   e.preventDefault();
@@ -59,9 +56,6 @@ export default function PreinscriptionForm() {
   //   setTimeout(() => setStatus(""), 5000);
   // };
 
-
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -74,8 +68,8 @@ export default function PreinscriptionForm() {
 
     try {
       await emailjs.send(
-      "service_j7j635n",
-      "template_hla3wdr",
+        "service_j7j635n",
+        "template_hla3wdr",
         {
           prenom: formData.prenom,
           nom: formData.nom,
@@ -109,26 +103,23 @@ export default function PreinscriptionForm() {
     <div className="contact-us preinscription section" id="preinscription">
       <div className="container">
         <div className="row">
-   <div className="col-lg-4 align-self-center">
-  <div className="section-heading">
-    <h6 className="subtitle">Préinscription</h6>
-    <h2>Réservez votre place dès maintenant !</h2>
-    <p>
-      Une occasion d’aborder l’IA de manière simple et utile, et de repartir avec des repères concrets pour vos projets !
-    </p>
+          <div className="col-lg-4 align-self-center">
+            <div className="section-heading">
+              <h6 className="subtitle">Préinscription</h6>
+              <h2>Réservez votre place dès maintenant !</h2>
+              <p>
+                Une occasion d’aborder l’IA de manière simple et utile, et de
+                repartir avec des repères concrets pour vos projets !
+              </p>
 
-{/*    
+                 
     <p className="mb-1">Participation : 100 Dinars</p>
-    <p className="mb-0">Places limitées !</p> */}
-  </div>
-</div>
-
-
+    {/* <p className="mb-0">Places limitées !</p> */}
+            </div>
+          </div>
 
           <div className="col-lg-8 position-relative">
-            <div className="limited-badge">
-    Places limitées !
-  </div>
+            <div className="limited-badge">Places limitées !</div>
             <div className="contact-us-content">
               <form id="contact-form" onSubmit={handleSubmit}>
                 <div className="row">
@@ -250,7 +241,10 @@ export default function PreinscriptionForm() {
                         onChange={handleChange}
                         required
                       />
-                      <label className="form-check-label" htmlFor="consentement">
+                      <label
+                        className="form-check-label"
+                        htmlFor="consentement"
+                      >
                         J’ai lu et j’accepte la{" "}
                         <button
                           type="button"
@@ -282,7 +276,8 @@ export default function PreinscriptionForm() {
                   {/* Messages de statut */}
                   {status === "success" && (
                     <p className="text-light mt-2">
-                      Préinscription réussie ! Nous vous contacterons prochainement.
+                      Préinscription réussie ! Nous vous contacterons
+                      prochainement.
                     </p>
                   )}
                   {status === "error" && (
@@ -297,38 +292,43 @@ export default function PreinscriptionForm() {
               <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
                 <h5> POLITIQUE DE CONFIDENTIALITÉ</h5>
                 <p>
-                  <strong> 1. Finalité du traitement :</strong> Les informations collectées (nom,
-                  prénom, email, téléphone, statut et domaine d’activité) sont
-                  utilisées uniquement pour : gérer votre inscription au
-                  séminaire, vous envoyer les informations pratiques liées à
-                  l’événement, vous contacter si nécessaire.
+                  <strong> 1. Finalité du traitement :</strong> Les informations
+                  collectées (nom, prénom, email, téléphone, statut et domaine
+                  d’activité) sont utilisées uniquement pour : gérer votre
+                  inscription au séminaire, vous envoyer les informations
+                  pratiques liées à l’événement, vous contacter si nécessaire.
                 </p>
                 <p>
-                   <strong> 2. Durée de conservation : </strong> Vos données seront conservées jusqu’à
-                  la fin du séminaire, puis supprimées dans un délai maximal de
-                  6 mois après l’événement.
+                  <strong> 2. Durée de conservation : </strong> Vos données
+                  seront conservées jusqu’à la fin du séminaire, puis supprimées
+                  dans un délai maximal de 6 mois après l’événement.
                 </p>
                 <p>
-                  <strong>3. Partage des données : </strong> Vos données ne sont jamais transmises à
-                  des tiers, sauf obligation légale prévue par la loi
-                  tunisienne.
+                  <strong>3. Partage des données : </strong> Vos données ne sont
+                  jamais transmises à des tiers, sauf obligation légale prévue
+                  par la loi tunisienne.
                 </p>
                 <p>
-                  <strong>4. Base légale : </strong> Le traitement repose sur votre consentement
-                  explicite, donné lors de l’inscription.
+                  <strong>4. Base légale : </strong> Le traitement repose sur
+                  votre consentement explicite, donné lors de l’inscription.
                 </p>
                 <p>
-                  <strong>5. Vos droits (Loi tunisienne n°2004-63) : </strong> Vous disposez d’un
-                  droit : d’accès à vos données, de rectification, d’opposition
-                  au traitement, de suppression. Pour exercer vos droits,
-                  contactez : contact@bird-tc.com
+                  <strong>5. Vos droits (Loi tunisienne n°2004-63) : </strong>{" "}
+                  Vous disposez d’un droit : d’accès à vos données, de
+                  rectification, d’opposition au traitement, de suppression.
+                  Pour exercer vos droits, contactez : contact@bird-tc.com
                 </p>
                 <p>
-                  <strong>6. Sécurité des données : </strong> Vos données sont traitées de manière
-                  sécurisée et accessibles uniquement aux personnes autorisées
-                  participant à l’organisation du séminaire.
+                  <strong>6. Sécurité des données : </strong> Vos données sont
+                  traitées de manière sécurisée et accessibles uniquement aux
+                  personnes autorisées participant à l’organisation du
+                  séminaire.
                 </p>
-                <p> <strong>7. Responsable du traitement : </strong>BIRD Training & Consulting</p>
+                <p>
+                  {" "}
+                  <strong>7. Responsable du traitement : </strong>BIRD Training
+                  & Consulting
+                </p>
               </Modal>
             </div>
           </div>
