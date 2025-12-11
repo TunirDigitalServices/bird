@@ -107,7 +107,7 @@ export default function PreinscriptionForm() {
             <div className="section-heading">
               <h6 className="subtitle">Préinscription</h6>
               <h2>Réservez votre place dès maintenant !</h2>
-              <p>
+              <p className=" justify-text">
                 Une occasion d’aborder l’IA de manière simple et utile, et de
                 repartir avec des repères concrets pour vos projets !
               </p>

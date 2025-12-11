@@ -108,7 +108,7 @@ export default function EventDetail(props) {
               {/* About */}
               <div className="col-lg-4">
                 <h2 style={{fontSize:24}}>À propos de l’événement</h2>
-                <p>{event.description}</p>
+                <p className=" justify-text">{event.description}</p>
               </div>
 
               {/* Where */}
@@ -151,7 +151,7 @@ export default function EventDetail(props) {
               <div className="row">
                 {speakers.map((speaker, index) => (
                   <div key={index} className="col-12">
-                    <div className="service-item">
+                    <div className="service-item justify-text">
                       <div className="icon">
                         <Image
                           src={speaker.img}
@@ -164,32 +164,32 @@ export default function EventDetail(props) {
                       <div className="main-content text-start">
                        <h4 style={{ lineHeight: 1.3 , color:"#001963"}}>
   Imen Regaïeg —{" "}
-  <span className="speaker-rolee" style={{ fontSize: "0.9em", color: "#001963", display: "block", marginTop: "0.2em" }}>
+  <span className="speaker-rolee  justify-text" style={{ fontSize: "0.9em", color: "#001963", display: "block", marginTop: "0.2em" }}>
     Directrice bancaire et formatrice en finance, management et IA appliquée
   </span>
 </h4>
 
 
-                        <p className="mt-4"> 
+                        <p className="mt-4  justify-text"> 
                           Avec plus de 18 ans d’expérience dans le secteur
                           bancaire, Imen Regaïeg a développé une expertise
                           solide en gestion des crédits et des risques, suivi des
                           engagements et reporting avancé, pilotant des équipes
                           et plusieurs projets clés.
                           </p>
-                        <p>
+                        <p className=" justify-text">
                           Formatrice certifiée, elle intervient sur la finance,
                           le management et l’IA appliquée comme levier pour
                           améliorer la prise de décision et l’efficacité
                           professionnelle.
                           </p>
-                          <p>
+                          <p className=" justify-text">
                           Consultante et conférencière, Imen met son expérience
                           au service de la transformation professionnelle, en
                           aidant ses participants à intégrer les technologies de
                           manière utile et concrète dans leur pratique.
                           </p>
-                          <p>
+                          <p className=" justify-text">
                           Elle mène également un projet de recherche sur
                           l’intelligence artificielle appliquée à la prise de
                           décision managériale et financière, explorant de

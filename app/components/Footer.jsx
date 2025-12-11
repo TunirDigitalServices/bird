@@ -22,7 +22,7 @@ export default function Footer() {
           {/* À propos */}
           <div className="col-md-3 mb-5 mb-lg-0">
             <h3 className="mb-3 text-white">À propos</h3>
-            <p className="mb-4 text-light">
+            <p className="mb-4 text-light justify-text">
               Bird Training & Consulting accompagne vos projets, développe vos
               équipes et intègre l’innovation et l’intelligence artificielle,
               toujours au service de l’humain.
@@ -72,7 +72,7 @@ export default function Footer() {
             <h3 className="mb-3 text-white">Contact</h3>
             <p className="d-flex mb-3 text-light align-items-start justify-content-center justify-content-md-start">
               <i className="bi bi-geo-alt-fill me-3 text-white"></i>
-              <span>
+              <span className=" justify-text">
                 Bloc A, 3ᵉ étage, bureau A1, Immeuble Henda, 10 rue de l’Île de
                 Rhodes, 1053 Les Berges du Lac 2, Tunis, Tunisie
               </span>
