@@ -164,7 +164,7 @@ export default function EventDetail(props) {
                       <div className="main-content text-start">
                        <h4 style={{ lineHeight: 1.3 , color:"#001963"}}>
   Imen Regaïeg —{" "}
-  <span className="speaker-rolee  justify-text" style={{ fontSize: "0.9em", color: "#001963", display: "block", marginTop: "0.2em" }}>
+  <span className="speaker-rolee" style={{ fontSize: "0.9em", color: "#001963", display: "block", marginTop: "0.2em" }}>
     Directrice bancaire et formatrice en finance, management et IA appliquée
   </span>
 </h4>
