@@ -8,11 +8,11 @@ import "./template.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-
 export const metadata = {
   metadataBase: new URL("https://www.bird-tc.com"),
 
-  title: "Bird Training & Consulting — Là où l’humain et l’innovation avancent ensemble.",
+  title:
+    "Bird Training & Consulting — Là où l’humain et l’innovation avancent ensemble.",
   description:
     "Accompagner vos projets, développer vos équipes et intégrer progressivement l’innovation et l’intelligence artificielle, toujours au service de l’humain.",
 
@@ -32,7 +32,6 @@ export const metadata = {
     canonical: "/",
   },
 
-
   // Robots for SEO
   robots: {
     index: true,
@@ -46,16 +45,11 @@ export const metadata = {
     },
   },
 
- 
+  // Favicons
+  icons: {
+    icon: "/bird.png",
+  },
 };
-
-
-
-
-
-
-
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
