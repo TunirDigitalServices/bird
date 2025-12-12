@@ -11,6 +11,7 @@ import Testimonials from "./components/Testimonials";
 import Faq from "./components/Faq";
 import ContactUs from "./components/ContactUs";
 import Benefits from "./components/Benefits";
+import Partners from "./components/Partners";
 import CallToAction from "./components/CallToAction";
 export const dynamic = "force-dynamic";
 
@@ -18,6 +19,7 @@ export default function Home() {
   return (
    <>
          <Hero />
+         <Partners/>
          <About/>
          <Features/>
          <HowItWorks/>

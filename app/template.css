@@ -1564,7 +1564,52 @@ width: 100% !important;
   color: var(--bs-primary);
 }
 
+.speedyui-partner {
+  --su-black-color: #000000;
+  --su-rubik-font: "Rubik", sans-serif;
+  font-family: var(--su-rubik-font);
+}
+.speedyui-partner h3 {
+  font-weight: 500;
+}
+.speedyui-partner .swiper-slide {
+  height: 95px;
+}
+.speedyui-partner .swiper-button-next,
+.speedyui-partner .swiper-button-prev {
+  width: 30px;
+  height: 30px;
+}
+.speedyui-partner .swiper-button-next::after,
+.speedyui-partner .swiper-button-prev::after {
+  font-size: 12px;
+  color: var(--su-black-color);
+}
+.speedyui-partner .swiper-button-next {
+  right: 0;
+}
+.speedyui-partner .swiper-button-prev {
+  left: 0;
+}
 
+
+/* Default logo size */
+.partner-logo {
+  max-height: 80px;
+  object-fit: contain; /* keeps circular logos intact */
+}
+
+/* Mobile screens - make images slightly bigger */
+@media (max-width: 576px) {
+  .partner-logo {
+    max-height: 100px;
+  }
+}
+
+
+.swiper-button-prev, .swiper-button-next{
+  color: var(--bs-primary);
+}
 
 .contact__v2 .subtitle {
   background-color: #fff;
@@ -1576,6 +1621,7 @@ width: 100% !important;
   font-size: 0.75rem;
   margin-bottom: 10px;
 }
+
 
 .contact__v2 .icon {
   width: 50px;
@@ -3227,4 +3273,15 @@ h2.accordion-header button {
 .speakerInfo .service-item p {
   color: #4a4a4a;
   margin-bottom: 25px;
+}
+
+.speedyui .subtitle {
+  background-color: #fff;
+  color: var(--bs-primary);
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin-bottom: 10px;
 }
