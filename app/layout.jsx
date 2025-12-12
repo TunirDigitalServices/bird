@@ -1,15 +1,19 @@
-"use client";
-
-
-import { useEffect, useState } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+// import ClientBootstrap from "./components/ClientBootstrap";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./template.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+export const metadata = {
+  title:
+    "Bird Training & Consulting — Là où l’humain et l’innovation avancent ensemble.",
+  description:
+    "Accompagner vos projets, développer vos équipes et intégrer progressivement l’innovation et l’intelligence artificielle, toujours au service de l’humain.",
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,24 +25,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
-
 export default function RootLayout({ children }) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-
-    // Load Bootstrap JS only on client
-    import("bootstrap/dist/js/bootstrap.bundle.min.js");
-  }, []);
-
   return (
     <html lang="en">
-      <body className={`antialiased ${mounted ? `${geistSans.variable} ${geistMono.variable}` : ""}`}>
+      <body
+        className={`antialiased ${geistSans.variable} ${geistMono.variable}`}
+      >
+        {/* Client-only wrapper */}
+        {/* <ClientBootstrap> */}
         <Navbar />
         {children}
         <Footer />
+        {/* </ClientBootstrap> */}
       </body>
     </html>
   );
