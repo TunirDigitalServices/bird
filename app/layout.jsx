@@ -1,7 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import ClientBootstrap from "./components/ClientBootstrap";
+// import ClientBootstrap from "./components/ClientBootstrap";
+import Script from "next/script";
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./template.css";
@@ -67,13 +69,17 @@ export default function RootLayout({ children }) {
       <body
         className={`antialiased ${geistSans.variable} ${geistMono.variable}`}
       >
-        {/* Client-only wrapper */}
-        {/* <ClientBootstrap> */}
-         <ClientBootstrap />
+       
+
         <Navbar />
         {children}
         <Footer />
-        {/* </ClientBootstrap> */}
+   
+        <Script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+          crossorigin="anonymous"
+        ></Script>
       </body>
     </html>
   );
