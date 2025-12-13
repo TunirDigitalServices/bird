@@ -16,7 +16,7 @@ export default function Hero() {
                   data-aos="fade-up"
                   data-aos-delay="0"
                 >
-                Accompagnement humain & Innovation
+                Accompagnement humain et Innovation
                 </span>
 
                 <h1
