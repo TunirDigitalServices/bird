@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-// import ClientBootstrap from "./components/ClientBootstrap";
+import ClientBootstrap from "./components/ClientBootstrap";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./template.css";
@@ -69,6 +69,7 @@ export default function RootLayout({ children }) {
       >
         {/* Client-only wrapper */}
         {/* <ClientBootstrap> */}
+         <ClientBootstrap />
         <Navbar />
         {children}
         <Footer />
